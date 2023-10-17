@@ -7,7 +7,7 @@
 
 protocol GundyKeyboardViewDelegate: AnyObject {
     func insertConsonant(_ newCharacter: String)
-    func insertVowels(_ newCharacter: String)
+    func insertVowel(_ newCharacter: String)
     func insertOther(_ newCharacter: String)
     func removeCharacter()
 }
