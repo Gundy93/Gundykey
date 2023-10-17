@@ -12,6 +12,7 @@ final class GundyKeyboardView: UIView {
     weak var delegate: GundyKeyboardViewDelegate?
     private var vowels: [String] = ["ㅗ", "ㅣ", "ㅏ", "ㅡ", "ㅜ", "ㅡ", "ㅓ", "ㅣ"]
     private var directions: [Direction] = []
+    private var isBeganEditing: Bool = false
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -28,6 +29,8 @@ final class GundyKeyboardView: UIView {
     
     @objc
     private func drag(_ sender: UIPanGestureRecognizer) {
+        guard isBeganEditing else { return }
+        
         switch sender.state {
         case .changed:
             guard directions.count < 4 else { return }
@@ -86,6 +89,7 @@ final class GundyKeyboardView: UIView {
             vowel = forthInput(with: vowel)
         }
         print(vowel)
+        isBeganEditing = false
         directions.removeAll()
         delegate?.insertVowel(vowel)
     }
@@ -110,13 +114,13 @@ final class GundyKeyboardView: UIView {
     private func thirdInput(with vowel: String) -> String {
         switch vowel {
         case "ㅐ":
-            return directions[2] == .right ? "ㅑ" : vowel
+            return "ㅑ"
         case "ㅔ":
-            return directions[2] == .left ? "ㅕ" : vowel
+            return "ㅕ"
         case "ㅚ":
-            return directions[2] == .up ? "ㅛ" : vowel
+            return "ㅛ"
         case "ㅟ":
-            return directions[2] == .down ? "ㅠ" : vowel
+            return "ㅠ"
         case "ㅘ":
             return directions[2] != .up ? "ㅙ" : vowel
         case "ㅝ":
@@ -164,5 +168,32 @@ extension GundyKeyboardView {
         } else {
             return y > 0 ? .leftDown : .leftUp
         }
+    }
+}
+
+extension GundyKeyboardView {
+    
+    @IBAction func inputConsonant(_ sender: KeyButton) {
+        guard let consonant = sender.titleLabel?.text else { return }
+        
+        delegate?.insertConsonant(consonant)
+    }
+    
+    @IBAction func inputVowel(_ sender: KeyButton) {
+        isBeganEditing = true
+    }
+    
+    @IBAction func inputOther(_ sender: KeyButton) {
+        guard let other = sender.titleLabel?.text else { return }
+        
+        delegate?.insertOther(other)
+    }
+    
+    @IBAction func inputSpace(_ sender: KeyButton) {
+        delegate?.insertOther(" ")
+    }
+    
+    @IBAction func removeCharacter(_ sender: KeyButton) {
+        delegate?.removeCharacter()
     }
 }
