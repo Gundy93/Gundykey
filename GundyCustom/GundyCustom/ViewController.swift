@@ -8,50 +8,57 @@
 import UIKit
 
 class ViewController: UIViewController {
-    ///Outlets
+    
     @IBOutlet weak var textField: UITextField!
     
-    ///Variables
-    var customKeyboardView: GundyKeyboardView!
+    private var customKeyboardView: GundyKeyboardView!
     private var lastInput: KoreanType = .other
-    private var lastWord: Character?
+    private var lastWords: [(text: String, type: KoreanType)] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        // Add CustomKeyboardView to the input view of text field
+        configureInputView()
+    }
+
+    private func configureInputView() {
         let nib = UINib(nibName: "GundyKeyboardView", bundle: nil)
         let objects = nib.instantiate(withOwner: nil, options: nil)
+        
         customKeyboardView = objects.first as? GundyKeyboardView
         customKeyboardView.delegate = self
+        
         let keyboardContainerView = UIView(frame: customKeyboardView.frame)
+        
         keyboardContainerView.addSubview(customKeyboardView)
         textField.inputView = keyboardContainerView
     }
-
-
 }
 
 extension ViewController: GundyKeyboardViewDelegate {
     
     func insertConsonant(_ newCharacter: String) {
+        let isInitialConsonant = lastInput != .vowel || ["ㄸ", "ㅃ", "ㅉ"].contains(newCharacter)
         let consonant = convertToUnicode(consonant: newCharacter,
-                                         isInitialConsonanat: lastInput != .vowel)
+                                         isInitialConsonant: isInitialConsonant)
         
         textField.insertText(consonant)
-        lastInput = lastInput != .vowel ? .initialConsonant : .finalConsonant(character: newCharacter)
+        lastInput = isInitialConsonant ? .initialConsonant : .finalConsonant(character: newCharacter)
+        lastWords.append((consonant, lastInput))
     }
     
     func insertVowel(_ newCharacter: String) {
         switch lastInput {
         case .finalConsonant(character: let consonant):
-            guard let lastWord else { return }
-            
             textField.deleteBackward()
-            textField.insertText(String(lastWord))
-            textField.insertText(convertToUnicode(consonant: consonant,
-                                                  isInitialConsonanat: true))
+            textField.insertText(lastWords[0].text)
+            textField.insertText(lastWords[1].text)
+            
+            let initialConsonant = convertToUnicode(consonant: consonant,
+                                                    isInitialConsonant: true)
+            
+            textField.insertText(initialConsonant)
+            lastWords.append((initialConsonant, .initialConsonant))
         default:
             break
         }
@@ -60,62 +67,71 @@ extension ViewController: GundyKeyboardViewDelegate {
         
         textField.insertText(vowel)
         lastInput = .vowel
+        lastWords.append((vowel, .vowel))
     }
     
     func insertOther(_ newCharacter: String) {
         textField.insertText(newCharacter)
         lastInput = .other
+        lastWords.removeAll()
     }
     
     func removeCharacter() {
         textField.deleteBackward()
-        lastInput = .other
-    }
-    
-    private func convertToUnicode(consonant: String, isInitialConsonanat: Bool) -> String {
-        if isInitialConsonanat == false {
-            lastWord = textField.text?.last
+        let _ = lastWords.popLast()
+        
+        guard let last = lastWords.last else {
+            lastInput = .other
+            return
         }
         
+        lastInput = last.type
+        lastWords.forEach { textField.insertText($0.text) }
+    }
+    
+    private func convertToUnicode(consonant: String, isInitialConsonant: Bool) -> String {
+        if isInitialConsonant {
+            lastWords.removeAll()
+        }
         switch consonant {
         case "ㄱ":
-            return isInitialConsonanat ? "\u{1100}" : "\u{11A8}"
+            return isInitialConsonant ? "\u{1100}" : "\u{11A8}"
         case "ㄲ":
-            return isInitialConsonanat ? "\u{1101}" : "\u{11A9}"
+            return isInitialConsonant ? "\u{1101}" : "\u{11A9}"
         case "ㄴ":
-            return isInitialConsonanat ? "\u{1102}" : "\u{11AB}"
+            return isInitialConsonant ? "\u{1102}" : "\u{11AB}"
         case "ㄷ":
-            return isInitialConsonanat ? "\u{1103}" : "\u{11AE}"
+            return isInitialConsonant ? "\u{1103}" : "\u{11AE}"
         case "ㄸ":
-            return isInitialConsonanat ? "\u{1104}" : "\u{D7CD}"
+            return "\u{1104}"
         case "ㄹ":
-            return isInitialConsonanat ? "\u{1105}" : "\u{11AF}"
+            return isInitialConsonant ? "\u{1105}" : "\u{11AF}"
         case "ㅁ":
-            return isInitialConsonanat ? "\u{1106}" : "\u{11B7}"
+            return isInitialConsonant ? "\u{1106}" : "\u{11B7}"
         case "ㅂ":
-            return isInitialConsonanat ? "\u{1107}" : "\u{11B8}"
+            return isInitialConsonant ? "\u{1107}" : "\u{11B8}"
         case "ㅃ":
-            return isInitialConsonanat ? "\u{1108}" : "\u{D7E6}"
+            return "\u{1108}"
         case "ㅅ":
-            return isInitialConsonanat ? "\u{1109}" : "\u{11BA}"
+            return isInitialConsonant ? "\u{1109}" : "\u{11BA}"
         case "ㅆ":
-            return isInitialConsonanat ? "\u{110A}" : "\u{11BB}"
+            return isInitialConsonant ? "\u{110A}" : "\u{11BB}"
         case "ㅇ":
-            return isInitialConsonanat ? "\u{110B}" : "\u{11BC}"
+            return isInitialConsonant ? "\u{110B}" : "\u{11BC}"
         case "ㅈ":
-            return isInitialConsonanat ? "\u{110C}" : "\u{11BD}"
+            return isInitialConsonant ? "\u{110C}" : "\u{11BD}"
         case "ㅉ":
-            return isInitialConsonanat ? "\u{110D}" : "\u{D7F9}"
+            return "\u{110D}"
         case "ㅊ":
-            return isInitialConsonanat ? "\u{110E}" : "\u{11BE}"
+            return isInitialConsonant ? "\u{110E}" : "\u{11BE}"
         case "ㅋ":
-            return isInitialConsonanat ? "\u{110F}" : "\u{11BF}"
+            return isInitialConsonant ? "\u{110F}" : "\u{11BF}"
         case "ㅌ":
-            return isInitialConsonanat ? "\u{1110}" : "\u{11C0}"
+            return isInitialConsonant ? "\u{1110}" : "\u{11C0}"
         case "ㅍ":
-            return isInitialConsonanat ? "\u{1111}" : "\u{11C1}"
+            return isInitialConsonant ? "\u{1111}" : "\u{11C1}"
         case "ㅎ":
-            return isInitialConsonanat ? "\u{1112}" : "\u{11C2}"
+            return isInitialConsonant ? "\u{1112}" : "\u{11C2}"
         default:
             return String()
         }

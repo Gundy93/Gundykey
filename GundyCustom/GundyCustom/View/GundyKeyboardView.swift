@@ -75,6 +75,8 @@ final class GundyKeyboardView: UIView {
     }
     
     private func inputVowel() {
+        guard directions.isEmpty == false else { return }
+        
         var vowel = vowels[directions[0].rawValue]
         
         if directions.count > 1 {
