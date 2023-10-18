@@ -20,6 +20,7 @@
 		BF5872BE2ADD23CC00C00F66 /* GundyKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872BD2ADD23CC00C00F66 /* GundyKeyboardView.swift */; };
 		BF5872C02ADD252800C00F66 /* GundyKeyboardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872BF2ADD252800C00F66 /* GundyKeyboardViewDelegate.swift */; };
 		BF5872C22ADFA48600C00F66 /* KoreanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872C12ADFA48600C00F66 /* KoreanType.swift */; };
+		BF5872C42ADFDD3B00C00F66 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872C32ADFDD3B00C00F66 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		BF5872BD2ADD23CC00C00F66 /* GundyKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GundyKeyboardView.swift; sourceTree = "<group>"; };
 		BF5872BF2ADD252800C00F66 /* GundyKeyboardViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GundyKeyboardViewDelegate.swift; sourceTree = "<group>"; };
 		BF5872C12ADFA48600C00F66 /* KoreanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanType.swift; sourceTree = "<group>"; };
+		BF5872C32ADFDD3B00C00F66 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				BF5872942ADBA7C900C00F66 /* AppDelegate.swift */,
 				BF5872962ADBA7C900C00F66 /* SceneDelegate.swift */,
+				BF5872C32ADFDD3B00C00F66 /* String+.swift */,
 				BF5872C12ADFA48600C00F66 /* KoreanType.swift */,
 				BF5872B82ADD133400C00F66 /* View */,
 				BF5872982ADBA7C900C00F66 /* ViewController.swift */,
@@ -241,6 +244,7 @@
 			files = (
 				BF5872BE2ADD23CC00C00F66 /* GundyKeyboardView.swift in Sources */,
 				BF5872C22ADFA48600C00F66 /* KoreanType.swift in Sources */,
+				BF5872C42ADFDD3B00C00F66 /* String+.swift in Sources */,
 				BF5872992ADBA7C900C00F66 /* ViewController.swift in Sources */,
 				BF5872C02ADD252800C00F66 /* GundyKeyboardViewDelegate.swift in Sources */,
 				BF5872952ADBA7C900C00F66 /* AppDelegate.swift in Sources */,
