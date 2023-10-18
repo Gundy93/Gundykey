@@ -536,7 +536,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="didBeginRemove:" destination="iN0-l3-epB" eventType="touchDown" id="v0r-hc-JMu"/>
+                                        <action selector="didBeginRemove:" destination="iN0-l3-epB" eventType="touchDown" id="mhf-xR-Jnm"/>
                                         <action selector="removeCharacter:" destination="iN0-l3-epB" eventType="touchUpInside" id="4bd-8G-dFI"/>
                                     </connections>
                                 </button>

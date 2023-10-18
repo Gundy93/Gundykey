@@ -22,10 +22,13 @@ final class GundyKeyboardView: UIView {
     }
     
     private func configureGestureRecognizer() {
-        let gestureRecognizer = UIPanGestureRecognizer(target: self,
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self,
                                              action: #selector(drag))
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self,
+                                                                      action: #selector(longPressRemove))
         
-        addGestureRecognizer(gestureRecognizer)
+        addGestureRecognizer(panGestureRecognizer)
+        addGestureRecognizer(longPressGestureRecognizer)
     }
     
     @objc
@@ -43,6 +46,13 @@ final class GundyKeyboardView: UIView {
             inputVowel()
         default:
             return
+        }
+    }
+    
+    @objc
+    private func longPressRemove(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == .ended {
+            timer?.invalidate()
         }
     }
     
