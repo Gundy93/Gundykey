@@ -73,6 +73,8 @@ extension ViewController: GundyKeyboardViewDelegate {
         
         if lastInput == .initialConsonant {
             vowel = vowel.toUnicodeVowel()
+        } else {
+            lastWords.removeAll()
         }
         
         textField.insertText(vowel)
