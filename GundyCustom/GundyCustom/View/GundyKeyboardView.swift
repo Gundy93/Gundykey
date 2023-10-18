@@ -13,6 +13,7 @@ final class GundyKeyboardView: UIView {
     private var vowels: [String] = ["ㅗ", "ㅣ", "ㅏ", "ㅡ", "ㅜ", "ㅡ", "ㅓ", "ㅣ"]
     private var directions: [Direction] = []
     private var isBeganEditing: Bool = false
+    private var timer: Timer?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -197,5 +198,15 @@ extension GundyKeyboardView {
     
     @IBAction func removeCharacter(_ sender: KeyButton) {
         delegate?.removeCharacter()
+        timer?.invalidate()
+    }
+    
+    @IBAction func didBeginRemove(_ sender: KeyButton) {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5,
+                                     repeats: false) { [weak self] _ in 
+            self?.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+                self?.delegate?.removeCharacter()
+            }
+        }
     }
 }
