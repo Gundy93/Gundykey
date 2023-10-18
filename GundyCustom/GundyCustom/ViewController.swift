@@ -38,15 +38,8 @@ class ViewController: UIViewController {
 extension ViewController: GundyKeyboardViewDelegate {
     
     func insertConsonant(_ newCharacter: String) {
-        if lastInput == .initialConsonant {
-            let lastConsonant = lastWords[0].text.toTextFromUnicode()
-            
-            removeCharacter()
-            textField.insertText(lastConsonant)
-        }
-        
         let isInitialConsonant = lastInput != .vowel || ["ㄸ", "ㅃ", "ㅉ"].contains(newCharacter)
-        let consonant = newCharacter.toUnicodeConsonant(isInitialConsonant: isInitialConsonant)
+        let consonant = isInitialConsonant ? newCharacter : newCharacter.toUnicodeConsonant(isInitialConsonant: false)
         
         if isInitialConsonant {
             lastWords.removeAll()
@@ -72,6 +65,12 @@ extension ViewController: GundyKeyboardViewDelegate {
         var vowel = newCharacter
         
         if lastInput == .initialConsonant {
+            let consonant = lastWords[0].text.toUnicodeConsonant(isInitialConsonant: true)
+            
+            textField.deleteBackward()
+            textField.insertText(consonant)
+            lastWords[0].text = consonant
+            
             vowel = vowel.toUnicodeVowel()
         } else {
             lastWords.removeAll()
