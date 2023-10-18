@@ -38,6 +38,13 @@ class ViewController: UIViewController {
 extension ViewController: GundyKeyboardViewDelegate {
     
     func insertConsonant(_ newCharacter: String) {
+        if lastInput == .initialConsonant {
+            let lastConsonant = convertToText(consonant: lastWords[0].text)
+            
+            removeCharacter()
+            textField.insertText(lastConsonant)
+        }
+        
         let isInitialConsonant = lastInput != .vowel || ["ㄸ", "ㅃ", "ㅉ"].contains(newCharacter)
         let consonant = convertToUnicode(consonant: newCharacter,
                                          isInitialConsonant: isInitialConsonant)
@@ -54,20 +61,22 @@ extension ViewController: GundyKeyboardViewDelegate {
             textField.insertText(lastWords[0].text)
             textField.insertText(lastWords[1].text)
             
-            let initialConsonant = convertToUnicode(consonant: consonant,
-                                                    isInitialConsonant: true)
-            
-            textField.insertText(initialConsonant)
-            lastWords.append((initialConsonant, .initialConsonant))
+            insertConsonant(consonant)
         default:
             break
         }
         
-        let vowel = convertToUnicode(vowel: newCharacter)
+        var vowel = newCharacter
+        
+        if lastInput == .initialConsonant {
+            vowel = convertToUnicode(vowel: newCharacter)
+        }
         
         textField.insertText(vowel)
         lastInput = .vowel
-        lastWords.append((vowel, .vowel))
+        if lastWords.isEmpty == false {
+            lastWords.append((vowel, .vowel))
+        }
     }
     
     func insertOther(_ newCharacter: String) {
@@ -181,6 +190,51 @@ extension ViewController: GundyKeyboardViewDelegate {
             return "\u{1174}"
         case "ㅣ":
             return "\u{1175}"
+        default:
+            return String()
+        }
+    }
+    
+    private func convertToText(consonant: String) -> String {
+        switch consonant {
+        case "\u{1100}":
+            return "ㄱ"
+        case "\u{1101}":
+            return "ㄲ"
+        case "\u{1102}":
+            return "ㄴ"
+        case "\u{1103}":
+            return "ㄷ"
+        case "\u{1104}":
+            return "ㄸ"
+        case "\u{1105}":
+            return "ㄹ"
+        case "\u{1106}":
+            return "ㅁ"
+        case "\u{1107}":
+            return "ㅂ"
+        case "\u{1108}":
+            return "ㅃ"
+        case "\u{1109}":
+            return "ㅅ"
+        case "\u{110A}":
+            return "ㅆ"
+        case "\u{110B}":
+            return "ㅇ"
+        case "\u{110C}":
+            return "ㅈ"
+        case "\u{110D}":
+            return "ㅉ"
+        case "\u{110E}":
+            return "ㅊ"
+        case "\u{110F}":
+            return "ㅋ"
+        case "\u{1110}":
+            return "ㅌ"
+        case "\u{1111}":
+            return "ㅍ"
+        case "\u{1112}":
+            return "ㅎ"
         default:
             return String()
         }
