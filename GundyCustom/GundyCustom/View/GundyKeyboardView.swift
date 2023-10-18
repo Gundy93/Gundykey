@@ -88,7 +88,7 @@ final class GundyKeyboardView: UIView {
         if directions.count == 4 {
             vowel = forthInput(with: vowel)
         }
-        print(vowel)
+        
         isBeganEditing = false
         directions.removeAll()
         delegate?.insertVowel(vowel)
