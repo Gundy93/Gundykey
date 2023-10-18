@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textField: UITextField!
     
     private var customKeyboardView: GundyKeyboardView!
@@ -19,8 +20,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configureInputView()
+        configureLayoutConstraint()
     }
-
+    
     private func configureInputView() {
         let nib = UINib(nibName: "GundyKeyboardView", bundle: nil)
         let objects = nib.instantiate(withOwner: nil, options: nil)
@@ -32,6 +34,10 @@ class ViewController: UIViewController {
         
         keyboardContainerView.addSubview(customKeyboardView)
         textField.inputView = keyboardContainerView
+    }
+    
+    private func configureLayoutConstraint() {
+        scrollView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor).isActive = true
     }
 }
 
