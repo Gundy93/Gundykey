@@ -8,7 +8,7 @@
 enum KoreanType: Equatable {
     
     case initialConsonant
+    case neuter
     case finalConsonant(character: String)
-    case vowel
     case other
 }

@@ -44,11 +44,14 @@ class ViewController: UIViewController {
 extension ViewController: GundyKeyboardViewDelegate {
     
     func insertConsonant(_ newCharacter: String) {
-        let isInitialConsonant = lastInput != .vowel || ["ㄸ", "ㅃ", "ㅉ"].contains(newCharacter)
-        let consonant = isInitialConsonant ? newCharacter : newCharacter.toUnicodeConsonant(isInitialConsonant: false)
+        let (consonant, isInitialConsonant) = convert(newCharacter)
         
         if isInitialConsonant {
             lastWords.removeAll()
+        } else if lastInput != .neuter {
+            textField.deleteBackward()
+            textField.insertText(lastWords[0].text)
+            textField.insertText(lastWords[1].text)
         }
         
         textField.insertText(consonant)
@@ -57,20 +60,9 @@ extension ViewController: GundyKeyboardViewDelegate {
     }
     
     func insertVowel(_ newCharacter: String) {
-        switch lastInput {
-        case .finalConsonant(character: let consonant):
-            textField.deleteBackward()
-            textField.insertText(lastWords[0].text)
-            textField.insertText(lastWords[1].text)
-            
-            insertConsonant(consonant)
-        default:
-            break
-        }
-        
         var vowel = newCharacter
-        
-        if lastInput == .initialConsonant {
+        switch lastInput {
+        case .initialConsonant:
             let consonant = lastWords[0].text.toUnicodeConsonant(isInitialConsonant: true)
             
             textField.deleteBackward()
@@ -78,14 +70,24 @@ extension ViewController: GundyKeyboardViewDelegate {
             lastWords[0].text = consonant
             
             vowel = vowel.toUnicodeVowel()
-        } else {
+        case .finalConsonant(character: let consonant):
+            textField.deleteBackward()
+            for index in 0...lastWords.count - 2 {
+                textField.insertText(lastWords[index].text)
+            }
+            insertConsonant(consonant.toUnicodeConsonant(isInitialConsonant: true))
+            
+            vowel = vowel.toUnicodeVowel()
+        default:
             lastWords.removeAll()
+            
+            lastInput = .other
         }
         
         textField.insertText(vowel)
-        lastInput = .vowel
         if lastWords.isEmpty == false {
-            lastWords.append((vowel, .vowel))
+            lastInput = .neuter
+            lastWords.append((vowel, .neuter))
         }
     }
     
@@ -106,5 +108,42 @@ extension ViewController: GundyKeyboardViewDelegate {
         
         lastInput = last.type
         lastWords.forEach { textField.insertText($0.text) }
+    }
+    
+    private func convert(_ newCharacter: String) -> (consonant: String, isInitialConsonant: Bool) {
+        switch lastInput {
+        case .neuter:
+            let isInitialConsonant = ["ㄸ", "ㅃ", "ㅉ"].contains(newCharacter)
+            return isInitialConsonant ? (newCharacter, isInitialConsonant) : (newCharacter.toUnicodeConsonant(isInitialConsonant: false), isInitialConsonant)
+        case .finalConsonant(character: let finalConsonant):
+            switch (finalConsonant, newCharacter) {
+            case ("ㄱ", "ㅅ"):
+                return ("\u{11AA}", false)
+            case ("ㄴ", "ㅈ"):
+                return ("\u{11AC}", false)
+            case ("ㄴ", "ㅎ"):
+                return ("\u{11AD}", false)
+            case ("ㄹ", "ㄱ"):
+                return ("\u{11B0}", false)
+            case ("ㄹ", "ㅁ"):
+                return ("\u{11B1}", false)
+            case ("ㄹ", "ㅂ"):
+                return ("\u{11B2}", false)
+            case ("ㄹ", "ㅅ"):
+                return ("\u{11B3}", false)
+            case ("ㄹ", "ㅌ"):
+                return ("\u{11B4}", false)
+            case ("ㄹ", "ㅍ"):
+                return ("\u{11B5}", false)
+            case ("ㄹ", "ㅎ"):
+                return ("\u{11B6}", false)
+            case ("ㅂ", "ㅅ"):
+                return ("\u{11B9}", false)
+            default:
+                return (newCharacter, true)
+            }
+        default:
+            return (newCharacter, true)
+        }
     }
 }
