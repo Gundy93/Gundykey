@@ -48,7 +48,7 @@ extension String {
         case "ㅎ":
             return isInitialConsonant ? "\u{1112}" : "\u{11C2}"
         default:
-            return String()
+            return self
         }
     }
     
@@ -97,7 +97,7 @@ extension String {
         case "ㅣ":
             return "\u{1175}"
         default:
-            return String()
+            return self
         }
     }
 }
