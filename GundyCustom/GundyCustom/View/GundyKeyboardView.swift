@@ -14,6 +14,8 @@ final class GundyKeyboardView: UIView {
     private var directions: [Direction] = []
     private var isBeganEditing: Bool = false
     private var timer: Timer?
+    private var startPoint: CGPoint?
+    private var lastDirection: Direction?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -33,16 +35,30 @@ final class GundyKeyboardView: UIView {
     
     @objc
     private func drag(_ sender: UIPanGestureRecognizer) {
-        guard isBeganEditing else { return }
+        let velocity = sender.velocity(in: self)
+        
+        guard isBeganEditing,
+              let direction = convertToDirection(x: velocity.x,
+                                                 y: velocity.y) else { return }
+        let point = sender.location(in: self)
         
         switch sender.state {
+        case .began:
+            startPoint = point
+            lastDirection = direction
         case .changed:
-            guard directions.count < 4 else { return }
+            guard directions.count < 4,
+                  let startPoint else { return }
             
-            let velocity = sender.velocity(in: self)
+            guard lastDirection?.isSimilar(direction: direction) == false else {
+                lastDirection = convertToDirection(x: point.x - startPoint.x,
+                                                   y: point.y - startPoint.y)
+                return
+            }
             
-            recordDirection(for: velocity)
+            recordDirection(for: point)
         case .ended:
+            recordDirection(for: point)
             inputVowel()
         default:
             return
@@ -56,38 +72,22 @@ final class GundyKeyboardView: UIView {
         }
     }
     
-    private func recordDirection(for velocity: CGPoint) {
-        let direction = convertToDirection(from: velocity)
-        guard let last = directions.last else {
-            directions.append(direction)
-            return
-        }
+    private func recordDirection(for point: CGPoint) {
+        guard let startPoint else { return }
         
-        switch direction {
-        case .up:
-            guard last != .up, last != .leftUp, last != .rightUp else { return }
-        case .rightUp:
-            guard last != .rightUp, last != .up, last != .right else { return }
-        case .right:
-            guard last != .right, last != .rightUp, last != .rightDown else { return }
-        case .rightDown:
-            guard last != .rightDown, last != .right, last != .down else { return }
-        case .down:
-            guard last != .down, last != .rightDown, last != .leftDown else { return }
-        case .leftDown:
-            guard last != .leftDown, last != .down, last != .left else { return }
-        case .left:
-            guard last != .left, last != .leftDown, last != .leftUp else { return }
-        case .leftUp:
-            guard last != .leftUp, last != .left, last != .up else { return }
-        }
+        let x = point.x - startPoint.x
+        let y = point.y - startPoint.y
         
+        guard abs(x) + abs(y) > 10,
+              let direction = convertToDirection(x: x,
+                                                 y: y) else { return }
+              
         directions.append(direction)
+        self.startPoint = point
+        lastDirection = nil
     }
     
     private func inputVowel() {
-        guard directions.isEmpty == false else { return }
-        
         var vowel = vowels[directions[0].rawValue]
         
         if directions.count > 1 {
@@ -166,12 +166,30 @@ extension GundyKeyboardView {
         case leftDown
         case left
         case leftUp
+        
+        func isSimilar(direction: Direction) -> Bool {
+            switch self {
+            case .up:
+                return [Direction.leftUp, Direction.up, Direction.rightUp].contains(direction)
+            case .rightUp:
+                return [Direction.up, Direction.rightUp, Direction.right].contains(direction)
+            case .right:
+                return [Direction.rightUp, Direction.right, Direction.rightDown].contains(direction)
+            case .rightDown:
+                return [Direction.right, Direction.rightDown, Direction.down].contains(direction)
+            case .down:
+                return [Direction.rightDown, Direction.down, Direction.leftDown].contains(direction)
+            case .leftDown:
+                return [Direction.down, Direction.leftDown, Direction.left].contains(direction)
+            case .left:
+                return [Direction.leftDown, Direction.left, Direction.leftUp].contains(direction)
+            case .leftUp:
+                return [Direction.left, Direction.leftUp, Direction.up].contains(direction)
+            }
+        }
     }
     
-    private func convertToDirection(from velocity: CGPoint) -> Direction {
-        let x = velocity.x
-        let y = velocity.y
-        
+    private func convertToDirection(x: CGFloat, y: CGFloat) -> Direction? {
         if abs(x) / 2.414 >= abs(y) {
             return x > 0 ? .right : .left
         } else if abs(y) / 2.414 >= abs(x) {
