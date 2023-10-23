@@ -17,6 +17,8 @@ final class GundyKeyboardView: UIInputView {
     private var startPoint: CGPoint?
     private var lastDirection: Direction?
     @IBOutlet weak var inputModeSwitch: KeyButton!
+    @IBOutlet var koreanLanguageViews: [UIView]!
+    @IBOutlet var numberViews: [UIView]!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -251,6 +253,24 @@ extension GundyKeyboardView {
                 self?.delegate?.removeCharacter()
                 UIDevice.current.playDeleteClick()
             }
+        }
+    }
+    
+    @IBAction func changeToNumbers(_ sender: KeyButton) {
+        koreanLanguageViews.forEach {
+            $0.isHidden = true
+        }
+        numberViews.forEach {
+            $0.isHidden = false
+        }
+    }
+    
+    @IBAction func changeToKoreans(_ sender: KeyButton) {
+        numberViews.forEach {
+            $0.isHidden = true
+        }
+        koreanLanguageViews.forEach {
+            $0.isHidden = false
         }
     }
 }
