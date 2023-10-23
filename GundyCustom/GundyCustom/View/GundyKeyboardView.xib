@@ -951,6 +951,9 @@
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="inputReturn:" destination="iN0-l3-epB" eventType="touchUpInside" id="thl-ei-lWC"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
