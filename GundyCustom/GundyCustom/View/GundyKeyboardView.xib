@@ -24,10 +24,6 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc6-Bf-aS8" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="XiB-9O-LBm"/>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="a0H-jH-l6q"/>
-                                    </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="ㅃ">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -510,7 +506,7 @@
                             <rect key="frame" x="0.0" y="224" width="324" height="44"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJq-9C-wFq" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="77" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="123">
@@ -522,8 +518,23 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7X-YM-zER" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="54" y="0.0" width="23" height="44"/>
+                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="globe" catalog="system"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="switchInputMode:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dnb-we-PbC"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gG1-Rd-3hy" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="85" y="0.0" width="154" height="44"/>
+                                    <rect key="frame" x="85" y="0.0" width="177" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="스페이스">
@@ -539,7 +550,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYc-DG-lJT" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="247" y="0.0" width="77" height="44"/>
+                                    <rect key="frame" x="270" y="0.0" width="54" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                                     <color key="tintColor" systemColor="labelColor"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -554,13 +565,14 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="tYc-DG-lJT" firstAttribute="width" secondItem="YJq-9C-wFq" secondAttribute="width" id="2U5-RN-vKr"/>
-                                <constraint firstItem="tYc-DG-lJT" firstAttribute="width" secondItem="gG1-Rd-3hy" secondAttribute="width" multiplier="0.5" id="tBL-MO-skT"/>
+                                <constraint firstItem="d7X-YM-zER" firstAttribute="width" secondItem="YJq-9C-wFq" secondAttribute="width" multiplier="0.5" id="eiG-jh-BGP"/>
                             </constraints>
                         </stackView>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="tYc-DG-lJT" firstAttribute="width" secondItem="8gl-ky-eK8" secondAttribute="width" id="93y-vF-Ssf"/>
                         <constraint firstItem="23X-VD-fAh" firstAttribute="width" secondItem="Qc6-Bf-aS8" secondAttribute="width" id="H0a-Oh-J7z"/>
+                        <constraint firstItem="YJq-9C-wFq" firstAttribute="width" secondItem="Qc6-Bf-aS8" secondAttribute="width" id="KtZ-9D-h3g"/>
                         <constraint firstItem="OzS-oS-OXY" firstAttribute="width" secondItem="Qc6-Bf-aS8" secondAttribute="width" id="OK8-CO-vJI"/>
                         <constraint firstItem="F4E-cN-s7B" firstAttribute="width" secondItem="Qc6-Bf-aS8" secondAttribute="width" id="Pig-b5-e1F"/>
                     </constraints>
@@ -569,17 +581,21 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemGray4Color"/>
             <constraints>
-                <constraint firstItem="xUo-Zy-YNq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="JUh-1a-KoG"/>
-                <constraint firstAttribute="trailing" secondItem="xUo-Zy-YNq" secondAttribute="trailing" constant="8" id="fM0-Zt-zxO"/>
-                <constraint firstAttribute="bottom" secondItem="xUo-Zy-YNq" secondAttribute="bottom" constant="42" id="miL-xR-KEF"/>
+                <constraint firstItem="xUo-Zy-YNq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="JUh-1a-KoG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xUo-Zy-YNq" secondAttribute="trailing" constant="8" id="fM0-Zt-zxO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xUo-Zy-YNq" secondAttribute="bottom" constant="8" id="miL-xR-KEF"/>
                 <constraint firstItem="xUo-Zy-YNq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="rdp-Z2-4UD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="38.167938931297705" y="200"/>
+            <connections>
+                <outlet property="inputModeSwitch" destination="d7X-YM-zER" id="ymu-Gg-BHi"/>
+            </connections>
+            <point key="canvasLocation" x="38.167938931297705" y="202.11267605633805"/>
         </view>
     </objects>
     <resources>
         <image name="delete.backward" catalog="system" width="128" height="102"/>
+        <image name="globe" catalog="system" width="128" height="123"/>
         <image name="return" catalog="system" width="128" height="102"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

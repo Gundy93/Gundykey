@@ -16,6 +16,7 @@ final class GundyKeyboardView: UIView {
     private var timer: Timer?
     private var startPoint: CGPoint?
     private var lastDirection: Direction?
+    @IBOutlet weak var inputModeSwitch: KeyButton!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -227,6 +228,10 @@ extension GundyKeyboardView {
     @IBAction func removeCharacter(_ sender: KeyButton) {
         delegate?.removeCharacter()
         timer?.invalidate()
+    }
+    
+    @IBAction func switchInputMode(_ sender: KeyButton) {
+        delegate?.switchInputMode()
     }
     
     @IBAction func didBeginRemove(_ sender: KeyButton) {

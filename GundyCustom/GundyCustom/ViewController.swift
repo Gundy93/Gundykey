@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         
         customKeyboardView = objects.first as? GundyKeyboardView
         customKeyboardView.delegate = self
+        customKeyboardView.inputModeSwitch.isHidden = true
         
         let keyboardContainerView = UIView(frame: customKeyboardView.frame)
         
