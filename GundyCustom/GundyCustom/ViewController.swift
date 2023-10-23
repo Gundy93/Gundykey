@@ -30,11 +30,7 @@ class ViewController: UIViewController {
         customKeyboardView = objects.first as? GundyKeyboardView
         customKeyboardView.delegate = self
         customKeyboardView.inputModeSwitch.isHidden = true
-        
-        let keyboardContainerView = UIView(frame: customKeyboardView.frame)
-        
-        keyboardContainerView.addSubview(customKeyboardView)
-        textField.inputView = keyboardContainerView
+        textField.inputView = customKeyboardView
     }
     
     private func configureLayoutConstraint() {
@@ -43,6 +39,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: GundyKeyboardViewDelegate {
+    
+    var isRemovable: Bool {
+        return textField.text?.isEmpty == false
+    }
     
     func insertConsonant(_ newCharacter: String) {
         let (consonant, isInitialConsonant) = convert(newCharacter)

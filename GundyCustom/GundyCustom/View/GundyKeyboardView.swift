@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class GundyKeyboardView: UIView {
+final class GundyKeyboardView: UIInputView {
     
     weak var delegate: GundyKeyboardViewDelegate?
     private var vowels: [String] = ["ㅗ", "ㅣ", "ㅏ", "ㅡ", "ㅜ", "ㅡ", "ㅓ", "ㅣ"]
@@ -106,6 +106,7 @@ final class GundyKeyboardView: UIView {
         isBeganEditing = false
         directions.removeAll()
         delegate?.insertVowel(vowel)
+        UIDevice.current.playInputClick()
     }
     
     private func secondInput(with vowel: String) -> String {
@@ -209,6 +210,7 @@ extension GundyKeyboardView {
         guard let consonant = sender.titleLabel?.text else { return }
         
         delegate?.insertConsonant(consonant)
+        UIDevice.current.playInputClick()
     }
     
     @IBAction func inputVowel(_ sender: KeyButton) {
@@ -219,14 +221,17 @@ extension GundyKeyboardView {
         guard let other = sender.titleLabel?.text else { return }
         
         delegate?.insertOther(other)
+        UIDevice.current.playInputClick()
     }
     
     @IBAction func inputSpace(_ sender: KeyButton) {
         delegate?.insertOther(" ")
+        UIDevice.current.playModifierClick()
     }
     
     @IBAction func removeCharacter(_ sender: KeyButton) {
         delegate?.removeCharacter()
+        UIDevice.current.playDeleteClick()
         timer?.invalidate()
     }
     
@@ -238,8 +243,21 @@ extension GundyKeyboardView {
         timer = Timer.scheduledTimer(withTimeInterval: 0.5,
                                      repeats: false) { [weak self] _ in 
             self?.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+                guard self?.delegate?.isRemovable == true else {
+                    self?.timer?.invalidate()
+                    return
+                }
+                
                 self?.delegate?.removeCharacter()
+                UIDevice.current.playDeleteClick()
             }
         }
+    }
+}
+
+extension GundyKeyboardView: UIInputViewAudioFeedback {
+    
+    var enableInputClicksWhenVisible: Bool {
+        return true
     }
 }
