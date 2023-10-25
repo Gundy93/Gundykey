@@ -54,6 +54,8 @@ extension KeyboardViewController: GundyKeyboardViewDelegate {
     }
     
     func insertConsonant(_ newCharacter: String) {
+        resetIfNeeded()
+        
         let (consonant, isInitialConsonant) = convert(newCharacter)
         
         if isInitialConsonant {
@@ -70,7 +72,10 @@ extension KeyboardViewController: GundyKeyboardViewDelegate {
     }
     
     func insertVowel(_ newCharacter: String) {
+        resetIfNeeded()
+        
         var vowel = newCharacter
+        
         switch lastInput {
         case .initialConsonant:
             let consonant = lastWords[0].text.toUnicodeConsonant(isInitialConsonant: true)
@@ -95,6 +100,7 @@ extension KeyboardViewController: GundyKeyboardViewDelegate {
         }
         
         textDocumentProxy.insertText(vowel)
+        
         if lastWords.isEmpty == false {
             lastInput = .neuter
             lastWords.append((vowel, .neuter))
@@ -155,5 +161,12 @@ extension KeyboardViewController: GundyKeyboardViewDelegate {
         default:
             return (newCharacter, true)
         }
+    }
+    
+    private func resetIfNeeded() {
+        guard textDocumentProxy.hasText == false else { return }
+        
+        lastInput = .other
+        lastWords.removeAll()
     }
 }

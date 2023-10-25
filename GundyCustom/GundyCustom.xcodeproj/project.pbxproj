@@ -29,6 +29,7 @@
 		BFC8C5932AE8E5230084E61B /* GundyKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872BD2ADD23CC00C00F66 /* GundyKeyboardView.swift */; };
 		BFC8C5942AE8E5230084E61B /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872BB2ADD140900C00F66 /* KeyButton.swift */; };
 		BFC8C5952AE8E5230084E61B /* GundyKeyboardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872BF2ADD252800C00F66 /* GundyKeyboardViewDelegate.swift */; };
+		BFC8C5962AE935660084E61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF58729D2ADBA7CA00C00F66 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC8C5962AE935660084E61B /* Assets.xcassets in Resources */,
 				BFC8C5922AE8E51D0084E61B /* GundyKeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

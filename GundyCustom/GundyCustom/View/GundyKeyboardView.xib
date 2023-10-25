@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +27,8 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc6-Bf-aS8" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅃ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -42,7 +44,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynZ-sy-SSA" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="54" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅉ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -58,7 +61,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPF-Hj-HuY" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="108" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㄸ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -74,7 +78,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVS-v1-2po" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="162" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㄲ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -90,7 +95,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsT-z9-k0X" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="216" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅆ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -117,7 +123,8 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89x-x6-By8" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="1">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -133,7 +140,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ai-2n-oYC" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="54" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="2">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -149,7 +157,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIH-bi-aFv" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="108" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="3">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -165,7 +174,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18V-l5-8U3" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="162" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="4">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -181,7 +191,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJx-K7-Cvz" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="216" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="5">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -199,7 +210,8 @@
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLu-J3-FNo" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="270" y="0.0" width="23" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <color key="backgroundColor" name="NormalKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="!">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -215,10 +227,11 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-Te-Hnw" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="301" y="0.0" width="23" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <color key="backgroundColor" name="NormalKey"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="wnC-c1-dgt"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="?">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -247,7 +260,8 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4E-cN-s7B" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅂ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -263,7 +277,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaI-Sm-fgB" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="54" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅈ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -279,7 +294,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-ek-PFC" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="108" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㄷ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -295,7 +311,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzI-iI-dMU" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="162" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㄱ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -311,7 +328,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9J-Qs-1ZI" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="216" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅅ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -338,7 +356,8 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mar-h0-EAh" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="6">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -354,7 +373,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2v-d0-dSs" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="54" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="7">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -370,7 +390,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40T-dU-K7l" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="108" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="8">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -386,7 +407,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-gL-kcI" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="162" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="9">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -402,7 +424,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpq-WA-q4U" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="216" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="0">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -420,7 +443,8 @@
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knD-79-i5W" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="270" y="0.0" width="23" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <color key="backgroundColor" name="NormalKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title=".">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -436,7 +460,8 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH9-ZV-daL" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="301" y="0.0" width="23" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <color key="backgroundColor" name="NormalKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title=",">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -464,7 +489,8 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzS-oS-OXY" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅁ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -480,7 +506,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nne-t9-VOE" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="54" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㄴ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -496,7 +523,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRZ-sA-Erj" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="108" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅇ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -512,7 +540,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEb-ld-Gj6" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="162" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㄹ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -528,7 +557,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-iW-A6S" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="216" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅎ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -555,7 +585,8 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4m-tc-hTc" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="-">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -571,7 +602,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o60-sU-mdg" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="54" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="/">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -587,7 +619,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-w6-TnK" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="108" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title=":">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -603,7 +636,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sib-aC-xmx" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="162" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title=";">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -619,7 +653,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xk5-eq-paC" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="216" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="&amp;">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -637,7 +672,8 @@
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ky-re-cCZ" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="270" y="0.0" width="23" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <color key="backgroundColor" name="NormalKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="@">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -653,7 +689,8 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VO-3B-iTW" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="301" y="0.0" width="23" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <color key="backgroundColor" name="NormalKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="#">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -681,7 +718,8 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23X-VD-fAh" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅋ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -697,7 +735,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnW-kM-QvR" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="54" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅌ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -713,7 +752,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRV-jI-R6E" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="108" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅊ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -729,7 +769,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3I-xN-Xqy" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="162" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ㅍ">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -745,7 +786,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69u-vr-hiV" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="216" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="모음">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -772,7 +814,8 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aan-H4-gbe" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="(">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -788,7 +831,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDl-3c-Lh9" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="54" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title=")">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -804,7 +848,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u6-oT-JUF" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="108" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="'">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -820,7 +865,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbB-OP-BdP" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="162" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="&quot;">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -836,7 +882,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xms-q8-OXi" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                             <rect key="frame" x="216" y="0.0" width="46" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="~">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -854,7 +901,8 @@
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gl-ky-eK8" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="270" y="0.0" width="54" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                    <color key="backgroundColor" name="SpecialKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="tintColor" systemColor="labelColor"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="" image="delete.backward" catalog="system">
@@ -880,7 +928,8 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJq-9C-wFq" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                    <color key="backgroundColor" name="SpecialKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="123">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -896,7 +945,8 @@
                                 </button>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCa-D7-oJ2" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="50" y="0.0" width="46" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                    <color key="backgroundColor" name="SpecialKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="한글">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -912,7 +962,8 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7X-YM-zER" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="54" y="0.0" width="23" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                    <color key="backgroundColor" name="SpecialKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="tintColor" systemColor="labelColor"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="globe" catalog="system"/>
@@ -927,7 +978,8 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gG1-Rd-3hy" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="85" y="0.0" width="177" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <color key="backgroundColor" name="NormalKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="스페이스">
                                         <color key="titleColor" systemColor="labelColor"/>
@@ -943,7 +995,8 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYc-DG-lJT" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="270" y="0.0" width="54" height="44"/>
-                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                    <color key="backgroundColor" name="SpecialKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="tintColor" systemColor="labelColor"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="" image="return" catalog="system">
@@ -1003,17 +1056,17 @@
         <image name="delete.backward" catalog="system" width="128" height="102"/>
         <image name="globe" catalog="system" width="128" height="123"/>
         <image name="return" catalog="system" width="128" height="102"/>
+        <namedColor name="NormalKey">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SpecialKey">
+            <color red="0.66666666666666663" green="0.68627450980392157" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
