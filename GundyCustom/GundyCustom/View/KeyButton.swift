@@ -27,7 +27,7 @@ final class KeyButton: UIButton {
     private func configureShadow() {
         layer.borderWidth = 1
         layer.borderColor = UIColor.clear.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowOffset = CGSize(width: 0, height: 1)
         layer.shadowOpacity = 0.2
         layer.shadowRadius = 0
     }
