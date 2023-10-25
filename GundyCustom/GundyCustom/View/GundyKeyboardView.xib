@@ -216,6 +216,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-Te-Hnw" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="301" y="0.0" width="23" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="wnC-c1-dgt"/>
+                                    </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="?">
                                         <color key="titleColor" systemColor="labelColor"/>

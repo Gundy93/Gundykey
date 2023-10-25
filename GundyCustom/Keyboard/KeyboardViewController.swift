@@ -7,54 +7,153 @@
 
 import UIKit
 
-class KeyboardViewController: UIInputViewController {
+final class KeyboardViewController: UIInputViewController {
 
-    @IBOutlet var nextKeyboardButton: UIButton!
+    private var customKeyboardView: GundyKeyboardView!
+    private var lastInput: KoreanType = .other
+    private var lastWords: [(text: String, type: KoreanType)] = []
+    private var lexicon: UILexicon?
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
         
-        // Add custom view sizing constraints here
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Perform custom UI setup here
-        self.nextKeyboardButton = UIButton(type: .system)
-        
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-        
-        self.view.addSubview(self.nextKeyboardButton)
-        
-        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-    }
-    
-    override func viewWillLayoutSubviews() {
-        self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
-        super.viewWillLayoutSubviews()
-    }
-    
-    override func textWillChange(_ textInput: UITextInput?) {
-        // The app is about to change the document's contents. Perform any preparation here.
-    }
-    
-    override func textDidChange(_ textInput: UITextInput?) {
-        // The app has just changed the document's contents, the document context has been updated.
-        
-        var textColor: UIColor
-        let proxy = self.textDocumentProxy
-        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-            textColor = UIColor.white
-        } else {
-            textColor = UIColor.black
-        }
-        self.nextKeyboardButton.setTitleColor(textColor, for: [])
+        configureInputView()
+        configureLexicon()
     }
 
+    private func configureInputView() {
+        let nib = UINib(nibName: "GundyKeyboardView", bundle: nil)
+        let objects = nib.instantiate(withOwner: nil, options: nil)
+        
+        customKeyboardView = objects.first as? GundyKeyboardView
+        customKeyboardView.delegate = self
+        customKeyboardView.inputModeSwitch.addTarget(self,
+                                                     action: #selector(handleInputModeList(from:with:)),
+                                                     for: .allTouchEvents)
+        customKeyboardView.inputModeSwitch.isHidden = !self.needsInputModeSwitchKey
+        inputView = customKeyboardView
+    }
+    
+    private func configureLexicon() {
+        requestSupplementaryLexicon { lexicon in
+          self.lexicon = lexicon
+        }
+    }
+}
+
+extension KeyboardViewController: GundyKeyboardViewDelegate {
+    
+    var isRemovable: Bool {
+        textDocumentProxy.hasText
+    }
+    
+    func insertConsonant(_ newCharacter: String) {
+        let (consonant, isInitialConsonant) = convert(newCharacter)
+        
+        if isInitialConsonant {
+            lastWords.removeAll()
+        } else if lastInput != .neuter {
+            textDocumentProxy.deleteBackward()
+            textDocumentProxy.insertText(lastWords[0].text)
+            textDocumentProxy.insertText(lastWords[1].text)
+        }
+        
+        textDocumentProxy.insertText(consonant)
+        lastInput = isInitialConsonant ? .initialConsonant : .finalConsonant(character: newCharacter)
+        lastWords.append((consonant, lastInput))
+    }
+    
+    func insertVowel(_ newCharacter: String) {
+        var vowel = newCharacter
+        switch lastInput {
+        case .initialConsonant:
+            let consonant = lastWords[0].text.toUnicodeConsonant(isInitialConsonant: true)
+            
+            textDocumentProxy.deleteBackward()
+            textDocumentProxy.insertText(consonant)
+            lastWords[0].text = consonant
+            
+            vowel = vowel.toUnicodeVowel()
+        case .finalConsonant(character: let consonant):
+            textDocumentProxy.deleteBackward()
+            for index in 0...lastWords.count - 2 {
+                textDocumentProxy.insertText(lastWords[index].text)
+            }
+            insertConsonant(consonant.toUnicodeConsonant(isInitialConsonant: true))
+            
+            vowel = vowel.toUnicodeVowel()
+        default:
+            lastWords.removeAll()
+            
+            lastInput = .other
+        }
+        
+        textDocumentProxy.insertText(vowel)
+        if lastWords.isEmpty == false {
+            lastInput = .neuter
+            lastWords.append((vowel, .neuter))
+        }
+    }
+    
+    func insertOther(_ newCharacter: String) {
+        textDocumentProxy.insertText(newCharacter)
+        lastInput = .other
+        lastWords.removeAll()
+    }
+    
+    func removeCharacter() {
+        textDocumentProxy.deleteBackward()
+        let _ = lastWords.popLast()
+        
+        guard let last = lastWords.last else {
+            lastInput = .other
+            return
+        }
+        
+        lastInput = last.type
+        lastWords.forEach { textDocumentProxy.insertText($0.text) }
+    }
+    
+    private func convert(_ newCharacter: String) -> (consonant: String, isInitialConsonant: Bool) {
+        switch lastInput {
+        case .neuter:
+            let isInitialConsonant = ["ㄸ", "ㅃ", "ㅉ"].contains(newCharacter)
+            return isInitialConsonant ? (newCharacter, isInitialConsonant) : (newCharacter.toUnicodeConsonant(isInitialConsonant: false), isInitialConsonant)
+        case .finalConsonant(character: let finalConsonant):
+            switch (finalConsonant, newCharacter) {
+            case ("ㄱ", "ㅅ"):
+                return ("\u{11AA}", false)
+            case ("ㄴ", "ㅈ"):
+                return ("\u{11AC}", false)
+            case ("ㄴ", "ㅎ"):
+                return ("\u{11AD}", false)
+            case ("ㄹ", "ㄱ"):
+                return ("\u{11B0}", false)
+            case ("ㄹ", "ㅁ"):
+                return ("\u{11B1}", false)
+            case ("ㄹ", "ㅂ"):
+                return ("\u{11B2}", false)
+            case ("ㄹ", "ㅅ"):
+                return ("\u{11B3}", false)
+            case ("ㄹ", "ㅌ"):
+                return ("\u{11B4}", false)
+            case ("ㄹ", "ㅍ"):
+                return ("\u{11B5}", false)
+            case ("ㄹ", "ㅎ"):
+                return ("\u{11B6}", false)
+            case ("ㅂ", "ㅅ"):
+                return ("\u{11B9}", false)
+            default:
+                return (newCharacter, true)
+            }
+        default:
+            return (newCharacter, true)
+        }
+    }
 }
