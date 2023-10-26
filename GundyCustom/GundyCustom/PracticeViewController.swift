@@ -81,7 +81,7 @@ final class PracticeViewController: UIViewController {
     
     private func configureInputView() {
         let nib = UINib(nibName: "GundyKeyboardView", bundle: nil)
-        let objects = nib.instantiate(withOwner: nil, options: nil)
+        let objects = nib.instantiate(withOwner: nil)
         
         customKeyboardView = objects.first as? GundyKeyboardView
         customKeyboardView.delegate = self

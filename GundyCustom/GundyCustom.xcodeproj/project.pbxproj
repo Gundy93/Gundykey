@@ -30,6 +30,8 @@
 		BFC8C5952AE8E5230084E61B /* GundyKeyboardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872BF2ADD252800C00F66 /* GundyKeyboardViewDelegate.swift */; };
 		BFC8C5962AE935660084E61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF58729D2ADBA7CA00C00F66 /* Assets.xcassets */; };
 		BFC8C5982AEA08BF0084E61B /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8C5972AEA08BF0084E61B /* PracticeViewController.swift */; };
+		BFC8C59A2AEA4B570084E61B /* ShortcutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8C5992AEA4B570084E61B /* ShortcutViewController.swift */; };
+		BFC8C5A02AEA568D0084E61B /* ShortcutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8C59F2AEA568D0084E61B /* ShortcutCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		BF5872C32ADFDD3B00C00F66 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		BF6081702AE6EFC6005C0C69 /* UIDevice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
 		BFC8C5972AEA08BF0084E61B /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		BFC8C5992AEA4B570084E61B /* ShortcutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutViewController.swift; sourceTree = "<group>"; };
+		BFC8C59F2AEA568D0084E61B /* ShortcutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				BF5872B82ADD133400C00F66 /* View */,
 				BF5872982ADBA7C900C00F66 /* MainViewController.swift */,
 				BFC8C5972AEA08BF0084E61B /* PracticeViewController.swift */,
+				BFC8C5992AEA4B570084E61B /* ShortcutViewController.swift */,
+				BFC8C59F2AEA568D0084E61B /* ShortcutCell.swift */,
 				BF58729D2ADBA7CA00C00F66 /* Assets.xcassets */,
 				BF58729F2ADBA7CA00C00F66 /* LaunchScreen.storyboard */,
 				BF5872A22ADBA7CA00C00F66 /* Info.plist */,
@@ -259,10 +265,12 @@
 				BF5872C22ADFA48600C00F66 /* KoreanType.swift in Sources */,
 				BFC8C5982AEA08BF0084E61B /* PracticeViewController.swift in Sources */,
 				BF5872C42ADFDD3B00C00F66 /* String+.swift in Sources */,
+				BFC8C5A02AEA568D0084E61B /* ShortcutCell.swift in Sources */,
 				BF5872992ADBA7C900C00F66 /* MainViewController.swift in Sources */,
 				BF5872C02ADD252800C00F66 /* GundyKeyboardViewDelegate.swift in Sources */,
 				BF5872952ADBA7C900C00F66 /* AppDelegate.swift in Sources */,
 				BF5872972ADBA7C900C00F66 /* SceneDelegate.swift in Sources */,
+				BFC8C59A2AEA4B570084E61B /* ShortcutViewController.swift in Sources */,
 				BF5872BC2ADD140900C00F66 /* KeyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
