@@ -84,20 +84,59 @@ extension ShortcutViewController: UITableViewDataSource {
         let consonant = Constant.consonants[indexPath.row]
         
         cell.setTitle(consonant)
-        cell.setShortcutText(UserDefaults.standard.string(forKey: consonant) ?? Constant.placeHolder)
+        cell.setShortcutText(UserDefaults.standard.string(forKey: consonant) ?? Constant.labelPlaceHolder)
         
         return cell
     }
 }
 
-extension ShortcutViewController: UITableViewDelegate {}
+extension ShortcutViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showAlertController(Constant.consonants[indexPath.row])
+        tableView.deselectRow(at: indexPath,
+                              animated: true)
+    }
+    
+    private func showAlertController(_ text: String) {
+        let alertController = UIAlertController(title: Constant.alertTitle + text,
+                                                message: nil,
+                                                preferredStyle: .alert)
+        
+        alertController.addTextField { textField in
+            textField.placeholder = Constant.textFieldPlaceHolder
+        }
+        
+        let acceptAction = UIAlertAction(title: "적용",
+                                         style: .default) { action in
+            guard let newShortcut = alertController.textFields?.first?.text else { return }
+            
+            UserDefaults.standard.setValue(newShortcut,
+                                           forKey: text)
+        }
+        let cancelAction = UIAlertAction(title: "취소",
+                                         style: .cancel)
+        
+        [acceptAction, cancelAction].forEach { action in
+            alertController.addAction(action)
+        }
+        present(alertController,
+                animated: true)
+    }
+}
 
 extension ShortcutViewController {
     
     enum Constant {
         
-        static let description: String = "아래의 칸을 눌러 특정 문구를 해당하는 자음에 단축키로 설정할 수 있습니다."
+        static let description: String = """
+                                         아래의 칸을 눌러 특정 문구를 해당하는 자음에 단축키로 설정할 수 있습니다.
+                                         
+                                         설정한 단축키는 해당 키를 1초간 누르면 입력됩니다.
+                                         """
         static let consonants: [String] = ["ㅃ", "ㅉ", "ㄸ", "ㄲ", "ㅆ", "ㅂ", "ㅈ", "ㄷ", "ㄱ", "ㅅ", "ㅁ", "ㄴ", "ㅇ", "ㄹ", "ㅎ", "ㅋ", "ㅌ", "ㅊ", "ㅍ"]
-        static let placeHolder: String = "지정된 단축키가 없습니다."
+        static let labelPlaceHolder: String = "지정된 단축키가 없습니다."
+        static let alertTitle: String = "단축키 "
+        static let textFieldPlaceHolder: String = "단축키를 작성하세요."
     }
 }
