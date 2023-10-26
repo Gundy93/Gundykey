@@ -12,6 +12,7 @@ final class KeyboardViewController: UIInputViewController {
     private var customKeyboardView: GundyKeyboardView!
     private var lastInput: KoreanType = .other
     private var lastWords: [(text: String, type: KoreanType)] = []
+    private var currentContextAfterInput: String?
     private var lexicon: UILexicon?
     
     override func updateViewConstraints() {
@@ -69,6 +70,7 @@ extension KeyboardViewController: GundyKeyboardViewDelegate {
         textDocumentProxy.insertText(consonant)
         lastInput = isInitialConsonant ? .initialConsonant : .finalConsonant(character: newCharacter)
         lastWords.append((consonant, lastInput))
+        currentContextAfterInput = textDocumentProxy.documentContextAfterInput
     }
     
     func insertVowel(_ newCharacter: String) {
@@ -105,6 +107,7 @@ extension KeyboardViewController: GundyKeyboardViewDelegate {
             lastInput = .neuter
             lastWords.append((vowel, .neuter))
         }
+        currentContextAfterInput = textDocumentProxy.documentContextAfterInput
     }
     
     func insertOther(_ newCharacter: String) {
@@ -164,7 +167,7 @@ extension KeyboardViewController: GundyKeyboardViewDelegate {
     }
     
     private func resetIfNeeded() {
-        guard textDocumentProxy.hasText == false else { return }
+        guard textDocumentProxy.hasText == false || currentContextAfterInput != textDocumentProxy.documentContextAfterInput else { return }
         
         lastInput = .other
         lastWords.removeAll()

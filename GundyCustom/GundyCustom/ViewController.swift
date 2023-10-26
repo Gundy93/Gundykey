@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     private var customKeyboardView: GundyKeyboardView!
     private var lastInput: KoreanType = .other
     private var lastWords: [(text: String, type: KoreanType)] = []
+    private var lastIndex: UITextRange?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,8 @@ extension ViewController: GundyKeyboardViewDelegate {
     }
     
     func insertConsonant(_ newCharacter: String) {
+        resetIfNeeded()
+        
         let (consonant, isInitialConsonant) = convert(newCharacter)
         
         if isInitialConsonant {
@@ -58,9 +61,12 @@ extension ViewController: GundyKeyboardViewDelegate {
         textField.insertText(consonant)
         lastInput = isInitialConsonant ? .initialConsonant : .finalConsonant(character: newCharacter)
         lastWords.append((consonant, lastInput))
+        lastIndex = textField.selectedTextRange
     }
     
     func insertVowel(_ newCharacter: String) {
+        resetIfNeeded()
+        
         var vowel = newCharacter
         switch lastInput {
         case .initialConsonant:
@@ -90,6 +96,7 @@ extension ViewController: GundyKeyboardViewDelegate {
             lastInput = .neuter
             lastWords.append((vowel, .neuter))
         }
+        lastIndex = textField.selectedTextRange
     }
     
     func insertOther(_ newCharacter: String) {
@@ -146,5 +153,12 @@ extension ViewController: GundyKeyboardViewDelegate {
         default:
             return (newCharacter, true)
         }
+    }
+    
+    private func resetIfNeeded() {
+        guard textField.selectedTextRange != lastIndex else { return }
+        
+        lastInput = .other
+        lastWords.removeAll()
     }
 }
