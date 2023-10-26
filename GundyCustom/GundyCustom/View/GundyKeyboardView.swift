@@ -30,7 +30,7 @@ final class GundyKeyboardView: UIInputView {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self,
                                              action: #selector(drag))
         let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self,
-                                                                      action: #selector(longPressRemove))
+                                                                      action: #selector(longPress))
         
         addGestureRecognizer(panGestureRecognizer)
         addGestureRecognizer(longPressGestureRecognizer)
@@ -69,9 +69,20 @@ final class GundyKeyboardView: UIInputView {
     }
     
     @objc
-    private func longPressRemove(_ sender: UILongPressGestureRecognizer) {
-        if sender.state == .ended {
-            timer?.invalidate()
+    private func longPress(_ sender: UILongPressGestureRecognizer) {
+        guard let button = sender.view as? KeyButton else { return }
+        
+        switch button.tag {
+        case 1:
+            guard let text = button.titleLabel?.text else { return }
+            NotificationCenter.default.post(name: .init(text),
+                                            object: nil)
+        case 2:
+            if sender.state == .ended {
+                timer?.invalidate()
+            }
+        default:
+            return
         }
     }
     
@@ -91,6 +102,8 @@ final class GundyKeyboardView: UIInputView {
     }
     
     private func inputVowel() {
+        guard directions.isEmpty == false else { return }
+        
         var vowel = vowels[directions[0].rawValue]
         
         if directions.count > 1 {
