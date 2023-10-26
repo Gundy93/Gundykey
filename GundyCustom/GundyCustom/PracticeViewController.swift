@@ -1,17 +1,48 @@
 //
-//  ViewController.swift
+//  PracticeViewController.swift
 //  GundyCustom
 //
-//  Created by Gundy on 2023/10/15.
+//  Created by Gundy on 10/26/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+final class PracticeViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var textField: UITextField!
-    
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        
+        scrollView.keyboardDismissMode = .interactive
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.alwaysBounceVertical = true
+        
+        return scrollView
+    }()
+    private let contentStackView: UIStackView = {
+        let stackView = UIStackView()
+        
+        stackView.axis = .vertical
+        stackView.spacing = 16
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
+    }()
+    private let descriptionLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = Constant.description
+        label.numberOfLines = 0
+        
+        return label
+    }()
+    private let practiceTextField: UITextField = {
+        let textField = UITextField()
+        
+        textField.placeholder = Constant.placeHolder
+        textField.borderStyle = .roundedRect
+        
+        return textField
+    }()
     private var customKeyboardView: GundyKeyboardView!
     private var lastInput: KoreanType = .other
     private var lastWords: [(text: String, type: KoreanType)] = []
@@ -20,8 +51,32 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUI()
         configureInputView()
         configureLayoutConstraint()
+    }
+    
+    private func configureUI() {
+        view.backgroundColor = .systemBackground
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentStackView)
+        [descriptionLabel, practiceTextField].forEach { subView in
+            contentStackView.addArrangedSubview(subView)
+        }
+        
+        let safeArea = view.safeAreaLayoutGuide
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 8),
+            scrollView.bottomAnchor.constraint(lessThanOrEqualTo: safeArea.bottomAnchor, constant: -8),
+            scrollView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 8),
+            scrollView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -8),
+            contentStackView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
+            contentStackView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+            contentStackView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
+            contentStackView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
+            contentStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
     }
     
     private func configureInputView() {
@@ -31,7 +86,7 @@ class ViewController: UIViewController {
         customKeyboardView = objects.first as? GundyKeyboardView
         customKeyboardView.delegate = self
         customKeyboardView.inputModeSwitch.isHidden = true
-        textField.inputView = customKeyboardView
+        practiceTextField.inputView = customKeyboardView
     }
     
     private func configureLayoutConstraint() {
@@ -39,10 +94,10 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: GundyKeyboardViewDelegate {
+extension PracticeViewController: GundyKeyboardViewDelegate {
     
     var isRemovable: Bool {
-        return textField.text?.isEmpty == false
+        return practiceTextField.text?.isEmpty == false
     }
     
     func insertConsonant(_ newCharacter: String) {
@@ -53,15 +108,15 @@ extension ViewController: GundyKeyboardViewDelegate {
         if isInitialConsonant {
             lastWords.removeAll()
         } else if lastInput != .neuter {
-            textField.deleteBackward()
-            textField.insertText(lastWords[0].text)
-            textField.insertText(lastWords[1].text)
+            practiceTextField.deleteBackward()
+            practiceTextField.insertText(lastWords[0].text)
+            practiceTextField.insertText(lastWords[1].text)
         }
         
-        textField.insertText(consonant)
+        practiceTextField.insertText(consonant)
         lastInput = isInitialConsonant ? .initialConsonant : .finalConsonant(character: newCharacter)
         lastWords.append((consonant, lastInput))
-        lastIndex = textField.selectedTextRange
+        lastIndex = practiceTextField.selectedTextRange
     }
     
     func insertVowel(_ newCharacter: String) {
@@ -72,15 +127,15 @@ extension ViewController: GundyKeyboardViewDelegate {
         case .initialConsonant:
             let consonant = lastWords[0].text.toUnicodeConsonant(isInitialConsonant: true)
             
-            textField.deleteBackward()
-            textField.insertText(consonant)
+            practiceTextField.deleteBackward()
+            practiceTextField.insertText(consonant)
             lastWords[0].text = consonant
             
             vowel = vowel.toUnicodeVowel()
         case .finalConsonant(character: let consonant):
-            textField.deleteBackward()
+            practiceTextField.deleteBackward()
             for index in 0...lastWords.count - 2 {
-                textField.insertText(lastWords[index].text)
+                practiceTextField.insertText(lastWords[index].text)
             }
             insertConsonant(consonant.toUnicodeConsonant(isInitialConsonant: true))
             
@@ -91,22 +146,22 @@ extension ViewController: GundyKeyboardViewDelegate {
             lastInput = .other
         }
         
-        textField.insertText(vowel)
+        practiceTextField.insertText(vowel)
         if lastWords.isEmpty == false {
             lastInput = .neuter
             lastWords.append((vowel, .neuter))
         }
-        lastIndex = textField.selectedTextRange
+        lastIndex = practiceTextField.selectedTextRange
     }
     
     func insertOther(_ newCharacter: String) {
-        textField.insertText(newCharacter)
+        practiceTextField.insertText(newCharacter)
         lastInput = .other
         lastWords.removeAll()
     }
     
     func removeCharacter() {
-        textField.deleteBackward()
+        practiceTextField.deleteBackward()
         let _ = lastWords.popLast()
         
         guard let last = lastWords.last else {
@@ -115,7 +170,7 @@ extension ViewController: GundyKeyboardViewDelegate {
         }
         
         lastInput = last.type
-        lastWords.forEach { textField.insertText($0.text) }
+        lastWords.forEach { practiceTextField.insertText($0.text) }
     }
     
     private func convert(_ newCharacter: String) -> (consonant: String, isInitialConsonant: Bool) {
@@ -156,9 +211,24 @@ extension ViewController: GundyKeyboardViewDelegate {
     }
     
     private func resetIfNeeded() {
-        guard textField.selectedTextRange != lastIndex else { return }
+        guard practiceTextField.selectedTextRange != lastIndex else { return }
         
         lastInput = .other
         lastWords.removeAll()
+    }
+}
+
+extension PracticeViewController {
+    
+    enum Constant {
+        
+        static let description: String = """
+                                         키보드를 추가하는 방법은 다음과 같습니다.
+                                         
+                                         설정 > 일반 > 키보드 > 키보드 > 새로운 키보드 추가 > 타사 키보드의 건디 키보드를 선택합니다.
+                                         
+                                         키보드를 추가하지 않아도 이 페이지에서 사용해 볼 수 있습니다.
+                                         """
+        static let placeHolder: String = "키보드를 사용해 보세요"
     }
 }

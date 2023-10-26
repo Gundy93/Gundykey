@@ -229,7 +229,7 @@
                                     <rect key="frame" x="301" y="0.0" width="23" height="44"/>
                                     <color key="backgroundColor" name="NormalKey"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="wnC-c1-dgt"/>
+                                        <constraint firstAttribute="height" constant="44" id="L2v-9l-8Dx"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
