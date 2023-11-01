@@ -75,7 +75,11 @@ extension ShortcutViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShortcutCell",
                                                        for: indexPath) as? ShortcutCell else { return ShortcutCell() }
         let consonant = Constant.consonants[indexPath.row]
-        let shortcut = UIPasteboard(name: UIPasteboard.Name(consonant), create: false)?.string
+        var shortcut = UIPasteboard(name: UIPasteboard.Name(consonant), create: false)?.string
+        
+        if shortcut?.isEmpty == true {
+            shortcut = nil
+        }
         
         cell.setTitle(consonant)
         cell.setShortcutText(shortcut ?? Constant.labelPlaceHolder)
