@@ -32,6 +32,7 @@ final class KeyboardViewController: UIInputViewController {
                                                      action: #selector(handleInputModeList(from:with:)),
                                                      for: .allTouchEvents)
         customKeyboardView.inputModeSwitch.isHidden = !self.needsInputModeSwitchKey
+        customKeyboardView.inputModeSwitch.heightAnchor.constraint(equalToConstant: 40).isActive = true
         inputView = customKeyboardView
     }
 }

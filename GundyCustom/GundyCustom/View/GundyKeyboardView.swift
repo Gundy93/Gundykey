@@ -215,7 +215,7 @@ extension GundyKeyboardView {
         
         delegate?.insertConsonant(consonant)
         UIDevice.current.playInputClick()
-//        timer?.invalidate()
+        timer?.invalidate()
     }
     
     @IBAction func inputVowel(_ sender: KeyButton) {
