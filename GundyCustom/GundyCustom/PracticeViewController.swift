@@ -12,7 +12,7 @@ final class PracticeViewController: UIViewController {
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         
-        scrollView.keyboardDismissMode = .interactive
+        scrollView.keyboardDismissMode = .onDrag
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.alwaysBounceVertical = true
         
@@ -227,7 +227,13 @@ extension PracticeViewController {
                                          
                                          설정 > 일반 > 키보드 > 키보드 > 새로운 키보드 추가 > 타사 키보드의 건디 키보드를 선택합니다.
                                          
-                                         키보드를 추가하지 않아도 이 페이지에서 사용해 볼 수 있습니다.
+                                         
+                                         추가한 후 건디 키보드의 단축키 등의 기능을 사용하려면 다음을 허용하세요.
+                                         
+                                         설정 > 일반 > 키보드 > 키보드 > 건디 키보드 > 전체 접근 허용을 합니다.
+                                         
+                                         
+                                         키보드를 추가하거나 전체 접근 허용을 하지 않아도 모든 기능을 이 페이지에서 사용해 볼 수 있습니다.
                                          """
         static let placeHolder: String = "키보드를 사용해 보세요"
     }

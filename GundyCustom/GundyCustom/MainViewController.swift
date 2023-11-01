@@ -64,6 +64,7 @@ extension MainViewController: UITableViewDataSource {
         
         cell.textLabel?.text = Constant.allCases[indexPath.row].itemDescription
         cell.imageView?.image = UIImage(systemName: Constant.allCases[indexPath.row].imageName)
+        cell.tintColor = .label
         
         return cell
     }

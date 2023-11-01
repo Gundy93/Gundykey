@@ -9,13 +9,6 @@ import UIKit
 
 final class ShortcutViewController: UIViewController {
     
-    private let scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return scrollView
-    }()
     private let contentStackView: UIStackView = {
         let stackView = UIStackView()
         
