@@ -13,24 +13,18 @@ final class KeyboardViewController: UIInputViewController {
     private var lastInput: KoreanType = .other
     private var lastWords: [(text: String, type: KoreanType)] = []
     private var currentContextAfterInput: String?
-    private var lexicon: UILexicon?
-    
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
-        
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureInputView()
-        configureLexicon()
     }
 
     private func configureInputView() {
-        let nib = UINib(nibName: "GundyKeyboardView", bundle: nil)
-        let objects = nib.instantiate(withOwner: nil, options: nil)
+        let nib = UINib(nibName: "GundyKeyboardView",
+                        bundle: nil)
+        let objects = nib.instantiate(withOwner: nil,
+                                      options: nil)
         
         customKeyboardView = objects.first as? GundyKeyboardView
         customKeyboardView.delegate = self
@@ -39,12 +33,6 @@ final class KeyboardViewController: UIInputViewController {
                                                      for: .allTouchEvents)
         customKeyboardView.inputModeSwitch.isHidden = !self.needsInputModeSwitchKey
         inputView = customKeyboardView
-    }
-    
-    private func configureLexicon() {
-        requestSupplementaryLexicon { lexicon in
-          self.lexicon = lexicon
-        }
     }
 }
 

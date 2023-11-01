@@ -70,19 +70,8 @@ final class GundyKeyboardView: UIInputView {
     
     @objc
     private func longPress(_ sender: UILongPressGestureRecognizer) {
-        guard let button = sender.view as? KeyButton else { return }
-        
-        switch button.tag {
-        case 1:
-            guard let text = button.titleLabel?.text else { return }
-            NotificationCenter.default.post(name: .init(text),
-                                            object: nil)
-        case 2:
-            if sender.state == .ended {
-                timer?.invalidate()
-            }
-        default:
-            return
+        if sender.state == .ended {
+            timer?.invalidate()
         }
     }
     
@@ -226,6 +215,7 @@ extension GundyKeyboardView {
         
         delegate?.insertConsonant(consonant)
         UIDevice.current.playInputClick()
+//        timer?.invalidate()
     }
     
     @IBAction func inputVowel(_ sender: KeyButton) {
@@ -254,18 +244,32 @@ extension GundyKeyboardView {
         delegate?.switchInputMode()
     }
     
-    @IBAction func didBeginRemove(_ sender: KeyButton) {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5,
-                                     repeats: false) { [weak self] _ in 
-            self?.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-                guard self?.delegate?.isRemovable == true else {
-                    self?.timer?.invalidate()
-                    return
-                }
+    @IBAction func didBeginLongPress(_ sender: KeyButton) {
+        switch sender.tag {
+        case 1:
+            timer = Timer.scheduledTimer(withTimeInterval: 0.5,
+                                         repeats: false) { [weak self] _ in
+                guard let text = sender.titleLabel?.text,
+                      let shortcut = UIPasteboard(name: UIPasteboard.Name(text), create: false)?.string else { return }
                 
-                self?.delegate?.removeCharacter()
-                UIDevice.current.playDeleteClick()
+                self?.delegate?.insertOther(shortcut)
+                UIDevice.current.playInputClick()
             }
+        case 2:
+            timer = Timer.scheduledTimer(withTimeInterval: 0.5,
+                                         repeats: false) { [weak self] _ in
+                self?.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+                    guard self?.delegate?.isRemovable == true else {
+                        self?.timer?.invalidate()
+                        return
+                    }
+                    
+                    self?.delegate?.removeCharacter()
+                    UIDevice.current.playDeleteClick()
+                }
+            }
+        default:
+            break
         }
     }
     

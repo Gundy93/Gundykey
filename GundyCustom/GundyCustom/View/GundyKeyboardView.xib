@@ -13,20 +13,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GundyKeyboardView" customModule="GundyCustom" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="340" height="318"/>
+            <rect key="frame" x="0.0" y="0.0" width="340" height="298"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xUo-Zy-YNq">
-                    <rect key="frame" x="8" y="8" width="324" height="268"/>
+                    <rect key="frame" x="8" y="8" width="324" height="248"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ThU-1I-Tpb" userLabel="firstRow">
-                            <rect key="frame" x="0.0" y="0.0" width="324" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="324" height="40"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4ZL-qe-1b3" userLabel="consonant">
-                                    <rect key="frame" x="0.0" y="0.0" width="262" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
                                     <subviews>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc6-Bf-aS8" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -39,11 +39,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Pum-if-C6D"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="b7B-0L-9uw"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynZ-sy-SSA" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="54" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -56,11 +57,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="yVE-X5-V2w"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="f5u-bz-mNc"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPF-Hj-HuY" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="108" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -73,11 +75,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="cHm-Xt-cSV"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="kY7-dB-mj6"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVS-v1-2po" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="162" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -90,11 +93,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="i4n-5n-Til"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="dah-IH-Phm"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsT-z9-k0X" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="216" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -107,6 +111,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="l78-gG-efN"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="3dY-U4-1AZ"/>
                                             </connections>
                                         </button>
@@ -119,10 +124,10 @@
                                     </constraints>
                                 </stackView>
                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rgb-k9-HPQ" userLabel="number">
-                                    <rect key="frame" x="266" y="0.0" width="262" height="44"/>
+                                    <rect key="frame" x="266" y="0.0" width="262" height="40"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89x-x6-By8" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -139,7 +144,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ai-2n-oYC" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="54" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -156,7 +161,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIH-bi-aFv" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="108" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -173,7 +178,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18V-l5-8U3" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="162" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -190,7 +195,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJx-K7-Cvz" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="216" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -209,7 +214,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLu-J3-FNo" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="270" y="0.0" width="23" height="44"/>
+                                    <rect key="frame" x="270" y="0.0" width="23" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -226,10 +231,10 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-Te-Hnw" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="301" y="0.0" width="23" height="44"/>
+                                    <rect key="frame" x="301" y="0.0" width="23" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="L2v-9l-8Dx"/>
+                                        <constraint firstAttribute="height" constant="40" id="yrc-16-dD6"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -253,13 +258,13 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-Nk-7Rz" userLabel="secondRow">
-                            <rect key="frame" x="0.0" y="56" width="324" height="44"/>
+                            <rect key="frame" x="0.0" y="52" width="324" height="40"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="83w-f9-fq9" userLabel="consonant">
-                                    <rect key="frame" x="0.0" y="0.0" width="262" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
                                     <subviews>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4E-cN-s7B" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -272,11 +277,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Ira-jx-LgB"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="hV2-Qz-Wwa"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaI-Sm-fgB" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="54" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -289,11 +295,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="aZ0-LM-RXP"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="7wX-mt-Ac7"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-ek-PFC" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="108" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -306,11 +313,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="fqm-ZC-nxI"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="nco-67-3ZJ"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzI-iI-dMU" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="162" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -323,11 +331,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="82e-vg-Kf7"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="nkp-EL-JPZ"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9J-Qs-1ZI" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="216" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -340,6 +349,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="xM9-zw-wxS"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="UfW-vS-J4i"/>
                                             </connections>
                                         </button>
@@ -352,10 +362,10 @@
                                     </constraints>
                                 </stackView>
                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-Mb-nkb" userLabel="number">
-                                    <rect key="frame" x="266" y="0.0" width="262" height="44"/>
+                                    <rect key="frame" x="266" y="0.0" width="262" height="40"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mar-h0-EAh" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -372,7 +382,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2v-d0-dSs" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="54" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -389,7 +399,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40T-dU-K7l" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="108" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -406,7 +416,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-gL-kcI" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="162" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -423,7 +433,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpq-WA-q4U" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="216" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -442,7 +452,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knD-79-i5W" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="270" y="0.0" width="23" height="44"/>
+                                    <rect key="frame" x="270" y="0.0" width="23" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -459,7 +469,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH9-ZV-daL" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="301" y="0.0" width="23" height="44"/>
+                                    <rect key="frame" x="301" y="0.0" width="23" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -482,13 +492,13 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RKJ-cx-VcG" userLabel="thirdRow">
-                            <rect key="frame" x="0.0" y="112" width="324" height="44"/>
+                            <rect key="frame" x="0.0" y="104" width="324" height="40"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pSo-ah-N7I" userLabel="consonant">
-                                    <rect key="frame" x="0.0" y="0.0" width="262" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
                                     <subviews>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzS-oS-OXY" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -501,11 +511,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="dKl-BY-DI4"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="016-Ii-bEn"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nne-t9-VOE" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="54" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -518,11 +529,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="gIO-xB-VEZ"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="HNR-au-qBU"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRZ-sA-Erj" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="108" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -535,11 +547,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="et4-Bd-YAs"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="TfI-SC-gyz"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEb-ld-Gj6" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="162" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -552,11 +565,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="iSs-H5-XpE"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="4Dv-3b-Iao"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-iW-A6S" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="216" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -569,6 +583,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="M46-Tb-HdY"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="bcf-xv-6Vu"/>
                                             </connections>
                                         </button>
@@ -581,10 +596,10 @@
                                     </constraints>
                                 </stackView>
                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Llj-AW-93G" userLabel="number">
-                                    <rect key="frame" x="266" y="0.0" width="262" height="44"/>
+                                    <rect key="frame" x="266" y="0.0" width="262" height="40"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4m-tc-hTc" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -601,7 +616,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o60-sU-mdg" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="54" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -618,7 +633,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-w6-TnK" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="108" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -635,7 +650,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sib-aC-xmx" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="162" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -652,7 +667,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xk5-eq-paC" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="216" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -671,7 +686,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ky-re-cCZ" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="270" y="0.0" width="23" height="44"/>
+                                    <rect key="frame" x="270" y="0.0" width="23" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -688,7 +703,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VO-3B-iTW" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="301" y="0.0" width="23" height="44"/>
+                                    <rect key="frame" x="301" y="0.0" width="23" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -711,13 +726,13 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aOb-PX-NRO" userLabel="forthRow">
-                            <rect key="frame" x="0.0" y="168" width="324" height="44"/>
+                            <rect key="frame" x="0.0" y="156" width="324" height="40"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3nj-zK-lXe" userLabel="consonant">
-                                    <rect key="frame" x="0.0" y="0.0" width="262" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
                                     <subviews>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23X-VD-fAh" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -730,11 +745,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Rgt-fK-gB6"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="LX8-4V-VkO"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnW-kM-QvR" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="54" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -747,11 +763,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="NyC-B6-PyE"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="yIW-lm-Vuz"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRV-jI-R6E" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="108" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -764,11 +781,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="WKN-1U-NYF"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="9sN-b3-7oW"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3I-xN-Xqy" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="162" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -781,11 +799,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
+                                                <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="gTh-Ub-5xs"/>
                                                 <action selector="inputConsonant:" destination="iN0-l3-epB" eventType="touchUpInside" id="iYt-Cz-FxD"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69u-vr-hiV" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="216" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -810,10 +829,10 @@
                                     </constraints>
                                 </stackView>
                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="paK-gf-CXL" userLabel="number">
-                                    <rect key="frame" x="266" y="0.0" width="262" height="44"/>
+                                    <rect key="frame" x="266" y="0.0" width="262" height="40"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aan-H4-gbe" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -830,7 +849,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDl-3c-Lh9" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="54" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -847,7 +866,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u6-oT-JUF" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="108" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -864,7 +883,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbB-OP-BdP" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="162" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -881,7 +900,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xms-q8-OXi" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                            <rect key="frame" x="216" y="0.0" width="46" height="44"/>
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -900,7 +919,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gl-ky-eK8" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="270" y="0.0" width="54" height="44"/>
+                                    <rect key="frame" x="270" y="0.0" width="54" height="40"/>
                                     <color key="backgroundColor" name="SpecialKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="tintColor" systemColor="labelColor"/>
@@ -914,7 +933,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="didBeginRemove:" destination="iN0-l3-epB" eventType="touchDown" id="mhf-xR-Jnm"/>
+                                        <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="0UT-je-8di"/>
                                         <action selector="removeCharacter:" destination="iN0-l3-epB" eventType="touchUpInside" id="4bd-8G-dFI"/>
                                     </connections>
                                 </button>
@@ -924,10 +943,10 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K4n-DI-2lL" userLabel="fifthRow">
-                            <rect key="frame" x="0.0" y="224" width="324" height="44"/>
+                            <rect key="frame" x="0.0" y="208" width="324" height="40"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJq-9C-wFq" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
                                     <color key="backgroundColor" name="SpecialKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -944,7 +963,7 @@
                                     </connections>
                                 </button>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCa-D7-oJ2" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="50" y="0.0" width="46" height="44"/>
+                                    <rect key="frame" x="50" y="0.0" width="46" height="40"/>
                                     <color key="backgroundColor" name="SpecialKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -961,7 +980,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7X-YM-zER" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="54" y="0.0" width="23" height="44"/>
+                                    <rect key="frame" x="54" y="0.0" width="23" height="40"/>
                                     <color key="backgroundColor" name="SpecialKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="tintColor" systemColor="labelColor"/>
@@ -977,7 +996,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gG1-Rd-3hy" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="85" y="0.0" width="177" height="44"/>
+                                    <rect key="frame" x="85" y="0.0" width="177" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -994,7 +1013,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYc-DG-lJT" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="270" y="0.0" width="54" height="44"/>
+                                    <rect key="frame" x="270" y="0.0" width="54" height="40"/>
                                     <color key="backgroundColor" name="SpecialKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="tintColor" systemColor="labelColor"/>
@@ -1049,7 +1068,7 @@
                 <outletCollection property="numberViews" destination="paK-gf-CXL" collectionClass="NSMutableArray" id="T1D-cx-xk4"/>
                 <outletCollection property="numberViews" destination="kCa-D7-oJ2" collectionClass="NSMutableArray" id="Csn-Dz-zdE"/>
             </connections>
-            <point key="canvasLocation" x="38.167938931297705" y="202.11267605633805"/>
+            <point key="canvasLocation" x="38.167938931297705" y="209.85915492957747"/>
         </view>
     </objects>
     <resources>
@@ -1060,7 +1079,7 @@
             <color red="0.81568627450980391" green="0.82745098039215681" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="NormalKey">
-            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SpecialKey">
             <color red="0.66666666666666663" green="0.68627450980392157" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

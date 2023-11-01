@@ -82,9 +82,10 @@ extension ShortcutViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShortcutCell",
                                                        for: indexPath) as? ShortcutCell else { return ShortcutCell() }
         let consonant = Constant.consonants[indexPath.row]
+        let shortcut = UIPasteboard(name: UIPasteboard.Name(consonant), create: false)?.string
         
         cell.setTitle(consonant)
-        cell.setShortcutText(UserDefaults.standard.string(forKey: consonant) ?? Constant.labelPlaceHolder)
+        cell.setShortcutText(shortcut ?? Constant.labelPlaceHolder)
         
         return cell
     }
@@ -108,11 +109,16 @@ extension ShortcutViewController: UITableViewDelegate {
         }
         
         let acceptAction = UIAlertAction(title: "적용",
-                                         style: .default) { action in
+                                         style: .default) { [weak self] _ in
             guard let newShortcut = alertController.textFields?.first?.text else { return }
             
-            UserDefaults.standard.setValue(newShortcut,
-                                           forKey: text)
+            if let existBoard = UIPasteboard(name: UIPasteboard.Name(text), create: false) {
+                existBoard.string = newShortcut
+            } else {
+                UIPasteboard(name: UIPasteboard.Name(text), create: true)?.string = newShortcut
+            }
+            
+            self?.shortcutTableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "취소",
                                          style: .cancel)
@@ -132,7 +138,7 @@ extension ShortcutViewController {
         static let description: String = """
                                          아래의 칸을 눌러 특정 문구를 해당하는 자음에 단축키로 설정할 수 있습니다.
                                          
-                                         설정한 단축키는 해당 키를 1초간 누르면 입력됩니다.
+                                         설정한 단축키는 해당 키를 0.5초간 누르면 입력됩니다.
                                          """
         static let consonants: [String] = ["ㅃ", "ㅉ", "ㄸ", "ㄲ", "ㅆ", "ㅂ", "ㅈ", "ㄷ", "ㄱ", "ㅅ", "ㅁ", "ㄴ", "ㅇ", "ㄹ", "ㅎ", "ㅋ", "ㅌ", "ㅊ", "ㅍ"]
         static let labelPlaceHolder: String = "지정된 단축키가 없습니다."
