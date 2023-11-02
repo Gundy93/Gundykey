@@ -2,13 +2,12 @@
 //  PracticeViewController.swift
 //  GundyCustom
 //
-//  Created by Gundy on 10/26/23.
+//  Created by Gundy on 11/2/23.
 //
 
 import UIKit
 
 final class PracticeViewController: UIViewController {
-    
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         
@@ -27,29 +26,10 @@ final class PracticeViewController: UIViewController {
         
         return stackView
     }()
-    private let descriptionLabel: UILabel = {
-        let label = UILabel()
-        
-        label.text = Constant.description
-        label.numberOfLines = 0
-        
-        return label
-    }()
-    private let jumpingButton: UIButton = {
-        let button = UIButton()
-        
-        button.setTitle(Constant.jumpingTitle,
-                        for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 17)
-        button.backgroundColor = .systemBlue
-        button.layer.cornerRadius = 8
-        
-        return button
-    }()
     private let practiceLabel: UILabel = {
         let label = UILabel()
         
-        label.text = Constant.description
+        label.text = Constant.practice
         label.numberOfLines = 0
         
         return label
@@ -73,14 +53,13 @@ final class PracticeViewController: UIViewController {
         configureUI()
         configureInputView()
         configureLayoutConstraint()
-        configureButton()
     }
     
     private func configureUI() {
         view.backgroundColor = .systemBackground
         view.addSubview(scrollView)
         scrollView.addSubview(contentStackView)
-        [descriptionLabel, jumpingButton, practiceTextField].forEach { subView in
+        [practiceLabel, practiceTextField].forEach { subView in
             contentStackView.addArrangedSubview(subView)
         }
         
@@ -111,21 +90,6 @@ final class PracticeViewController: UIViewController {
     
     private func configureLayoutConstraint() {
         scrollView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor).isActive = true
-    }
-    
-    private func configureButton() {
-        jumpingButton.addTarget(self,
-                                action: #selector(jumpToSetting),
-                                for: .touchUpInside)
-    }
-    
-    @objc
-    private func jumpToSetting() {
-        guard let settingURL = URL(string: UIApplication.openSettingsURLString) else { return }
-        
-        if UIApplication.shared.canOpenURL(settingURL) {
-            UIApplication.shared.open(settingURL)
-        }
     }
 }
 
@@ -257,17 +221,6 @@ extension PracticeViewController {
     
     enum Constant {
         
-        static let jumpingTitle: String = "설정으로 이동하기"
-        static let description: String = """
-                                         키보드를 추가하는 방법은 다음과 같습니다.
-                                         
-                                         설정 > 일반 > 키보드 > 키보드 > 새로운 키보드 추가 > 타사 키보드의 건디 키보드를 선택합니다.
-                                         
-                                         
-                                         추가한 후 건디 키보드의 단축키 등의 기능을 사용하려면 다음을 허용하세요.
-                                         
-                                         설정 > 일반 > 키보드 > 키보드 > 건디 키보드 > 전체 접근 허용을 합니다.
-                                         """
         static let practice: String = "키보드를 추가하거나 전체 접근 허용을 하지 않아도 모든 기능을 이 페이지에서 사용해 볼 수 있습니다."
         static let placeHolder: String = "키보드를 사용해 보세요"
     }

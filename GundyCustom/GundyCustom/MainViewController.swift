@@ -79,12 +79,14 @@ extension MainViewController: UITableViewDelegate {
         var nextViewController: UIViewController = UIViewController()
         
         switch title {
-        case Constant.practice.itemDescription:
-            nextViewController = PracticeViewController()
+        case Constant.keyboardSetting.itemDescription:
+            nextViewController = KeyboardSettingViewController()
         case Constant.information.itemDescription:
             nextViewController = InformationViewController()
         case Constant.shortcut.itemDescription:
             nextViewController = ShortcutViewController()
+        case Constant.practice.itemDescription:
+            nextViewController = PracticeViewController()
         default:
             break
         }
@@ -103,28 +105,33 @@ extension MainViewController {
         
         static let mainTitle: String = "건디 키보드"
         
-        case practice
+        case keyboardSetting
         case information
         case shortcut
+        case practice
         
         var itemDescription: String {
             switch self {
-            case .practice:
-                return "키보드 추가 방법"
+            case .keyboardSetting:
+                return "키보드 설정"
             case .information:
                 return "모음 입력 방법"
             case .shortcut:
                 return "자음 단축키 지정"
+            case .practice:
+                return "키보드 써 보기"
             }
         }
         var imageName: String {
             switch self {
-            case .practice:
-                return "keyboard"
+            case .keyboardSetting:
+                return "square.grid.3x1.folder.badge.plus"
             case .information:
                 return "info.square"
             case .shortcut:
                 return "rectangle.and.hand.point.up.left"
+            case .practice:
+                return "keyboard"
             }
         }
     }
