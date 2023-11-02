@@ -61,9 +61,11 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell",
                                                  for: indexPath)
+        var configuration = cell.defaultContentConfiguration()
         
-        cell.textLabel?.text = Constant.allCases[indexPath.row].itemDescription
-        cell.imageView?.image = UIImage(systemName: Constant.allCases[indexPath.row].imageName)
+        configuration.text = Constant.allCases[indexPath.row].itemDescription
+        configuration.image = UIImage(systemName: Constant.allCases[indexPath.row].imageName)
+        cell.contentConfiguration = configuration
         cell.tintColor = .label
         
         return cell
