@@ -81,6 +81,8 @@ extension MainViewController: UITableViewDelegate {
         switch title {
         case Constant.practice.itemDescription:
             nextViewController = PracticeViewController()
+        case Constant.information.itemDescription:
+            nextViewController = InformationViewController()
         case Constant.shortcut.itemDescription:
             nextViewController = ShortcutViewController()
         default:
@@ -102,20 +104,25 @@ extension MainViewController {
         static let mainTitle: String = "건디 키보드"
         
         case practice
+        case information
         case shortcut
         
         var itemDescription: String {
             switch self {
             case .practice:
-                return "키보드 추가하기"
+                return "키보드 추가 방법"
+            case .information:
+                return "모음 입력 방법"
             case .shortcut:
-                return "단축키 지정하기"
+                return "자음 단축키 지정"
             }
         }
         var imageName: String {
             switch self {
             case .practice:
                 return "keyboard"
+            case .information:
+                return "info.square"
             case .shortcut:
                 return "rectangle.and.hand.point.up.left"
             }

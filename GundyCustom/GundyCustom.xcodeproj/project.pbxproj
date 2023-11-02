@@ -21,6 +21,8 @@
 		BF5872C22ADFA48600C00F66 /* KoreanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872C12ADFA48600C00F66 /* KoreanType.swift */; };
 		BF5872C42ADFDD3B00C00F66 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872C32ADFDD3B00C00F66 /* String+.swift */; };
 		BF6081712AE6EFC6005C0C69 /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6081702AE6EFC6005C0C69 /* UIDevice+.swift */; };
+		BFA275402AF375F900A3ACFA /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA2753F2AF375F900A3ACFA /* InformationViewController.swift */; };
+		BFA275422AF37CA500A3ACFA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA275412AF37CA500A3ACFA /* InformationCell.swift */; };
 		BFC8C58F2AE8E50D0084E61B /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872C32ADFDD3B00C00F66 /* String+.swift */; };
 		BFC8C5902AE8E5100084E61B /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6081702AE6EFC6005C0C69 /* UIDevice+.swift */; };
 		BFC8C5912AE8E5120084E61B /* KoreanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872C12ADFA48600C00F66 /* KoreanType.swift */; };
@@ -76,6 +78,8 @@
 		BF5872C12ADFA48600C00F66 /* KoreanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanType.swift; sourceTree = "<group>"; };
 		BF5872C32ADFDD3B00C00F66 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		BF6081702AE6EFC6005C0C69 /* UIDevice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
+		BFA2753F2AF375F900A3ACFA /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		BFA275412AF37CA500A3ACFA /* InformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
 		BFC8C5972AEA08BF0084E61B /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		BFC8C5992AEA4B570084E61B /* ShortcutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutViewController.swift; sourceTree = "<group>"; };
 		BFC8C59F2AEA568D0084E61B /* ShortcutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutCell.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				BF5872B82ADD133400C00F66 /* View */,
 				BF5872982ADBA7C900C00F66 /* MainViewController.swift */,
 				BFC8C5972AEA08BF0084E61B /* PracticeViewController.swift */,
+				BFA2753F2AF375F900A3ACFA /* InformationViewController.swift */,
+				BFA275412AF37CA500A3ACFA /* InformationCell.swift */,
 				BFC8C5992AEA4B570084E61B /* ShortcutViewController.swift */,
 				BFC8C59F2AEA568D0084E61B /* ShortcutCell.swift */,
 				BF58729D2ADBA7CA00C00F66 /* Assets.xcassets */,
@@ -260,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA275402AF375F900A3ACFA /* InformationViewController.swift in Sources */,
 				BF5872BE2ADD23CC00C00F66 /* GundyKeyboardView.swift in Sources */,
+				BFA275422AF37CA500A3ACFA /* InformationCell.swift in Sources */,
 				BF6081712AE6EFC6005C0C69 /* UIDevice+.swift in Sources */,
 				BF5872C22ADFA48600C00F66 /* KoreanType.swift in Sources */,
 				BFC8C5982AEA08BF0084E61B /* PracticeViewController.swift in Sources */,
