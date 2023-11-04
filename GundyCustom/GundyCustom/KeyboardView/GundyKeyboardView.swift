@@ -38,6 +38,8 @@ final class GundyKeyboardView: UIInputView {
     
     @objc
     private func drag(_ sender: UIPanGestureRecognizer) {
+        timer?.invalidate()
+        
         let velocity = sender.velocity(in: self)
         
         guard isBeganEditing,
