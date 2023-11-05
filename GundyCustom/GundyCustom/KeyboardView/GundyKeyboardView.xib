@@ -213,6 +213,96 @@
                                         </button>
                                     </subviews>
                                 </stackView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pWc-oX-CWh" userLabel="specialCharacter">
+                                    <rect key="frame" x="266" y="0.0" width="262" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcm-tI-htb" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="[">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="dko-Vq-Lex"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5L-JX-DHC" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="]">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fk2-U5-OtM"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3N-dn-Icm" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="{">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="OR6-mG-58S"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCp-L6-qJd" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="}">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="JpK-Hg-yUr"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UJ-vf-h4i" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="#">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="orU-Dm-7Lx"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLu-J3-FNo" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="270" y="0.0" width="23" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
@@ -249,6 +339,7 @@
                                 </button>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="pWc-oX-CWh" firstAttribute="width" secondItem="rgb-k9-HPQ" secondAttribute="width" id="G1L-5v-frn"/>
                                 <constraint firstItem="BLu-J3-FNo" firstAttribute="width" secondItem="wZ8-Te-Hnw" secondAttribute="width" id="VVk-Mo-sJG"/>
                                 <constraint firstItem="rgb-k9-HPQ" firstAttribute="width" secondItem="4ZL-qe-1b3" secondAttribute="width" id="c9e-5j-mke"/>
                                 <constraint firstItem="Qc6-Bf-aS8" firstAttribute="width" secondItem="BLu-J3-FNo" secondAttribute="width" multiplier="2" id="iYh-wS-UWc"/>
@@ -448,6 +539,96 @@
                                         </button>
                                     </subviews>
                                 </stackView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h7G-tP-pQV" userLabel="specialCharacter">
+                                    <rect key="frame" x="266" y="0.0" width="262" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oks-BU-I9K" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="%">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="iHh-3Z-7VS"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8x-SQ-Yh3" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="^">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="gug-uY-ZZT"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTP-wZ-QWw" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="*">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="V3X-6q-Rxg"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grY-Qw-eMA" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="+">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="hXB-bE-IJH"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5w-QS-IoE" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="=">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="eBB-MV-Mb5"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knD-79-i5W" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="270" y="0.0" width="23" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
@@ -484,6 +665,7 @@
                                 </button>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="h7G-tP-pQV" firstAttribute="width" secondItem="tvR-Mb-nkb" secondAttribute="width" id="2ay-i4-vcb"/>
                                 <constraint firstItem="knD-79-i5W" firstAttribute="width" secondItem="aH9-ZV-daL" secondAttribute="width" id="fGc-d1-1lc"/>
                                 <constraint firstItem="tvR-Mb-nkb" firstAttribute="width" secondItem="83w-f9-fq9" secondAttribute="width" id="nvU-DQ-f55"/>
                             </constraints>
@@ -682,6 +864,96 @@
                                         </button>
                                     </subviews>
                                 </stackView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ra8-YJ-obh" userLabel="specialCharacter">
+                                    <rect key="frame" x="266" y="0.0" width="262" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEa-vR-vLW" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="_">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="ejV-5h-t8C"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgi-Uy-F6d" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="\">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="jkA-Um-fNM"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojK-1G-Jqb" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="|">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="pP0-fG-XKE"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMZ-k3-89x" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="&lt;">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="YAy-ds-p7W"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-BE-RAu" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="&gt;">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="lRP-fL-PV6"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ky-re-cCZ" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="270" y="0.0" width="54" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
@@ -699,9 +971,44 @@
                                         <action selector="pasteInto:" destination="iN0-l3-epB" eventType="touchUpInside" id="ifX-Uz-X1y"/>
                                     </connections>
                                 </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kN-DU-wWS" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="324" y="0.0" width="0.0" height="40"/>
+                                    <color key="backgroundColor" name="SpecialKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="#+=">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="changeToSpecialCharacters:" destination="iN0-l3-epB" eventType="touchUpInside" id="Onh-Xy-wei"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8r-j4-6Cp" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="324" y="0.0" width="0.0" height="40"/>
+                                    <color key="backgroundColor" name="SpecialKey"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="123">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="changeToNumbers:" destination="iN0-l3-epB" eventType="touchUpInside" id="GK4-iw-4pf"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="Llj-AW-93G" firstAttribute="width" secondItem="pSo-ah-N7I" secondAttribute="width" id="LOo-mL-xQm"/>
+                                <constraint firstItem="Ra8-YJ-obh" firstAttribute="width" secondItem="Llj-AW-93G" secondAttribute="width" id="qq0-Zv-u3M"/>
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aOb-PX-NRO" userLabel="forthRow">
@@ -849,7 +1156,7 @@
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="'">
+                                            <state key="normal" title="@">
                                                 <color key="titleColor" systemColor="labelColor"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -866,7 +1173,7 @@
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="&quot;">
+                                            <state key="normal" title="'">
                                                 <color key="titleColor" systemColor="labelColor"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -883,7 +1190,7 @@
                                             <color key="backgroundColor" name="NormalKey"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="~">
+                                            <state key="normal" title="&quot;">
                                                 <color key="titleColor" systemColor="labelColor"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -893,6 +1200,96 @@
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="Cqg-cY-7rZ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-Af-5k1" userLabel="specialCharacter">
+                                    <rect key="frame" x="266" y="0.0" width="262" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-wj-bn6" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="~">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="eSf-Ji-Tjn"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knf-fR-PqJ" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="$">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="DPT-pT-lO8"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omD-85-aPv" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="₩">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="fMj-1T-4iT"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sU-1h-6yY" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="•">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="Aw4-u2-dg5"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFu-6i-RMn" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" name="NormalKey"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="⋯">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="bQ8-BY-bX2"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -918,6 +1315,7 @@
                                 </button>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="gbS-Af-5k1" firstAttribute="width" secondItem="paK-gf-CXL" secondAttribute="width" id="M8G-IQ-I8L"/>
                                 <constraint firstItem="paK-gf-CXL" firstAttribute="width" secondItem="3nj-zK-lXe" secondAttribute="width" id="RWO-be-cNz"/>
                             </constraints>
                         </stackView>
@@ -1046,6 +1444,14 @@
                 <outletCollection property="numberViews" destination="Llj-AW-93G" collectionClass="NSMutableArray" id="JON-VF-SCA"/>
                 <outletCollection property="numberViews" destination="paK-gf-CXL" collectionClass="NSMutableArray" id="T1D-cx-xk4"/>
                 <outletCollection property="numberViews" destination="kCa-D7-oJ2" collectionClass="NSMutableArray" id="Csn-Dz-zdE"/>
+                <outletCollection property="numberViews" destination="1kN-DU-wWS" collectionClass="NSMutableArray" id="nAC-fM-OBt"/>
+                <outletCollection property="koreanLanguageViews" destination="0Ky-re-cCZ" collectionClass="NSMutableArray" id="2XL-81-olM"/>
+                <outletCollection property="specialCharacterViews" destination="z8r-j4-6Cp" collectionClass="NSMutableArray" id="8vJ-4A-awX"/>
+                <outletCollection property="specialCharacterViews" destination="kCa-D7-oJ2" collectionClass="NSMutableArray" id="2ag-WP-BGW"/>
+                <outletCollection property="specialCharacterViews" destination="pWc-oX-CWh" collectionClass="NSMutableArray" id="Zee-d2-JhV"/>
+                <outletCollection property="specialCharacterViews" destination="h7G-tP-pQV" collectionClass="NSMutableArray" id="dlG-Zy-Jpe"/>
+                <outletCollection property="specialCharacterViews" destination="Ra8-YJ-obh" collectionClass="NSMutableArray" id="HKT-Dw-fnb"/>
+                <outletCollection property="specialCharacterViews" destination="gbS-Af-5k1" collectionClass="NSMutableArray" id="Eeu-rs-KbP"/>
             </connections>
             <point key="canvasLocation" x="38.167938931297705" y="209.85915492957747"/>
         </view>

@@ -19,6 +19,7 @@ final class GundyKeyboardView: UIInputView {
     @IBOutlet weak var inputModeSwitch: KeyButton!
     @IBOutlet var koreanLanguageViews: [UIView]!
     @IBOutlet var numberViews: [UIView]!
+    @IBOutlet var specialCharacterViews: [UIView]!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -289,7 +290,23 @@ extension GundyKeyboardView {
         koreanLanguageViews.forEach {
             $0.isHidden = true
         }
+        specialCharacterViews.forEach {
+            $0.isHidden = true
+        }
         numberViews.forEach {
+            $0.isHidden = false
+        }
+        UIDevice.current.playModifierClick()
+    }
+    
+    @IBAction func changeToSpecialCharacters(_ sender: KeyButton) {
+        koreanLanguageViews.forEach {
+            $0.isHidden = true
+        }
+        numberViews.forEach {
+            $0.isHidden = true
+        }
+        specialCharacterViews.forEach {
             $0.isHidden = false
         }
         UIDevice.current.playModifierClick()
@@ -297,6 +314,9 @@ extension GundyKeyboardView {
     
     @IBAction func changeToKoreans(_ sender: KeyButton) {
         numberViews.forEach {
+            $0.isHidden = true
+        }
+        specialCharacterViews.forEach {
             $0.isHidden = true
         }
         koreanLanguageViews.forEach {
