@@ -7,6 +7,33 @@
 
 extension String {
     
+    var defaultShortcut: String {
+        switch self {
+        case "ㅃ":
+            return "1"
+        case "ㅉ":
+            return "2"
+        case "ㄸ":
+            return "3"
+        case "ㄲ":
+            return "4"
+        case "ㅆ":
+            return "5"
+        case "ㅂ":
+            return "6"
+        case "ㅈ":
+            return "7"
+        case "ㄷ":
+            return "8"
+        case "ㄱ":
+            return "9"
+        case "ㅅ":
+            return "0"
+        default:
+            return ""
+        }
+    }
+    
     func toUnicodeConsonant(isInitialConsonant: Bool) -> String {
         switch self {
         case "ㄱ":

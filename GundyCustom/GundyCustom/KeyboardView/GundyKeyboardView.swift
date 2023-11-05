@@ -252,10 +252,14 @@ extension GundyKeyboardView {
         case 1:
             timer = Timer.scheduledTimer(withTimeInterval: 0.5,
                                          repeats: false) { [weak self] _ in
-                guard let text = sender.titleLabel?.text,
-                      let shortcut = UIPasteboard(name: UIPasteboard.Name(text), create: false)?.string else { return }
+                guard let text = sender.titleLabel?.text else { return }
+                var shortcut = UIPasteboard(name: UIPasteboard.Name(text), create: false)?.string
                 
-                self?.delegate?.insertOther(shortcut)
+                if shortcut == nil {
+                    shortcut = shortcut?.defaultShortcut
+                }
+                
+                self?.delegate?.insertOther(shortcut ?? "")
                 UIDevice.current.playInputClick()
             }
         case 2:

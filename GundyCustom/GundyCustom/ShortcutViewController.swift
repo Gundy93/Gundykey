@@ -81,6 +81,10 @@ extension ShortcutViewController: UITableViewDataSource {
             shortcut = nil
         }
         
+        if shortcut == nil {
+            shortcut = consonant.defaultShortcut
+        }
+        
         cell.setTitle(consonant)
         cell.setShortcutText(shortcut ?? Constant.labelPlaceHolder)
         
@@ -136,6 +140,8 @@ extension ShortcutViewController {
                                          아래의 칸을 눌러 특정 문구를 해당하는 자음에 단축키로 설정할 수 있습니다.
                                          
                                          설정한 단축키는 해당 키를 0.5초간 누르면 입력됩니다.
+                                         
+                                         'ㅃ'부터 'ㅅ'까지는 미설정 시 '1'부터 '0'까지의 숫자가 기본값으로 입력됩니다.
                                          """
         static let consonants: [String] = ["ㅃ", "ㅉ", "ㄸ", "ㄲ", "ㅆ", "ㅂ", "ㅈ", "ㄷ", "ㄱ", "ㅅ", "ㅁ", "ㄴ", "ㅇ", "ㄹ", "ㅎ", "ㅋ", "ㅌ", "ㅊ", "ㅍ"]
         static let labelPlaceHolder: String = "지정된 단축키가 없습니다."
