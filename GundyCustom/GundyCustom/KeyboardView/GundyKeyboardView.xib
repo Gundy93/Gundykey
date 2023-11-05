@@ -683,11 +683,11 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ky-re-cCZ" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="270" y="0.0" width="23" height="40"/>
+                                    <rect key="frame" x="270" y="0.0" width="54" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="@">
+                                    <state key="normal" title="붙여넣기">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
@@ -696,30 +696,12 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="ay9-M1-5aV"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VO-3B-iTW" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
-                                    <rect key="frame" x="301" y="0.0" width="23" height="40"/>
-                                    <color key="backgroundColor" name="NormalKey"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="#">
-                                        <color key="titleColor" systemColor="labelColor"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="8"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="pn6-HJ-pbd"/>
+                                        <action selector="pasteInto:" destination="iN0-l3-epB" eventType="touchUpInside" id="ifX-Uz-X1y"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="Llj-AW-93G" firstAttribute="width" secondItem="pSo-ah-N7I" secondAttribute="width" id="LOo-mL-xQm"/>
-                                <constraint firstItem="0Ky-re-cCZ" firstAttribute="width" secondItem="0VO-3B-iTW" secondAttribute="width" id="lgK-81-occ"/>
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aOb-PX-NRO" userLabel="forthRow">

@@ -280,6 +280,11 @@ extension GundyKeyboardView {
         UIDevice.current.playModifierClick()
     }
     
+    @IBAction func pasteInto(_ sender: KeyButton) {
+        delegate?.pasteInto()
+        UIDevice.current.playModifierClick()
+    }
+    
     @IBAction func changeToNumbers(_ sender: KeyButton) {
         koreanLanguageViews.forEach {
             $0.isHidden = true

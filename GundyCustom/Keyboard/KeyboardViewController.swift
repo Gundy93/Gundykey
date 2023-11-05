@@ -105,6 +105,12 @@ extension KeyboardViewController: GundyKeyboardViewDelegate {
         lastWords.removeAll()
     }
     
+    func pasteInto() {
+        guard let currentText = UIPasteboard.general.string else { return }
+        
+        textDocumentProxy.insertText(currentText)
+    }
+    
     func removeCharacter() {
         textDocumentProxy.deleteBackward()
         let _ = lastWords.popLast()

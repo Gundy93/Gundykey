@@ -159,6 +159,12 @@ extension PracticeViewController: GundyKeyboardViewDelegate {
         lastWords.removeAll()
     }
     
+    func pasteInto() {
+        guard let currentText = UIPasteboard.general.string else { return }
+        
+        practiceTextField.insertText(currentText)
+    }
+    
     func removeCharacter() {
         practiceTextField.deleteBackward()
         let _ = lastWords.popLast()
