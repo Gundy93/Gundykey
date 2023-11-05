@@ -22,7 +22,7 @@ final class KeyboardSettingViewController: UIViewController {
         let label = UILabel()
         
         label.text = Constant.keyboardAddition
-        label.font = .preferredFont(forTextStyle: .title3)
+        label.font = .preferredFont(forTextStyle: .title2)
         label.numberOfLines = 0
         
         return label
@@ -40,12 +40,30 @@ final class KeyboardSettingViewController: UIViewController {
         let label = UILabel()
         
         label.text = Constant.shortcutSetting
-        label.font = .preferredFont(forTextStyle: .title3)
+        label.font = .preferredFont(forTextStyle: .title2)
         label.numberOfLines = 0
         
         return label
     }()
     private let shortcutSettingPathLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = Constant.shortcutSettingPath
+        label.textColor = .systemBlue
+        label.numberOfLines = 0
+        
+        return label
+    }()
+    private let pasteSettingLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = Constant.shortcutSetting
+        label.font = .preferredFont(forTextStyle: .title2)
+        label.numberOfLines = 0
+        
+        return label
+    }()
+    private let pasteSettingPathLabel: UILabel = {
         let label = UILabel()
         
         label.text = Constant.shortcutSettingPath
@@ -76,7 +94,7 @@ final class KeyboardSettingViewController: UIViewController {
     private func configureUI() {
         view.backgroundColor = .systemBackground
         view.addSubview(containerStackView)
-        [keyboardAdditionLabel, keyboardAdditionPathLabel, shortcutSettingLabel, shortcutSettingPathLabel, jumpingButton].forEach { subView in
+        [keyboardAdditionLabel, keyboardAdditionPathLabel, shortcutSettingLabel, shortcutSettingPathLabel, pasteSettingLabel, pasteSettingPathLabel, jumpingButton].forEach { subView in
             containerStackView.addArrangedSubview(subView)
         }
         
@@ -111,9 +129,11 @@ extension KeyboardSettingViewController {
     enum Constant {
         
         static let keyboardAddition: String = "키보드 추가"
-        static let keyboardAdditionPath: String = "설정 > 일반 > 키보드 > 키보드 > 새로운 키보드 추가 > 타사 키보드의 건디 키보드를 선택합니다."
+        static let keyboardAdditionPath: String = "설정 > 건디키 > 건디키를 켜줍니다."
         static let shortcutSetting: String = "단축키 기능 사용"
-        static let shortcutSettingPath: String = "설정 > 일반 > 키보드 > 키보드 > 건디 키보드 > 전체 접근 허용을 합니다."
+        static let shortcutSettingPath: String = "설정 > 건디키 > 전체 접근 허용을 켜줍니다."
+        static let pasteSetting: String = "붙여넣기 권한 설정"
+        static let pasteSettingPath: String = "설정 > 건디키 > 다른 앱에서 붙여넣기 > 허용을 합니다."
         static let jumpingTitle: String = "설정으로 이동하기"
     }
 }
