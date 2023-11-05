@@ -255,8 +255,8 @@ extension GundyKeyboardView {
                 guard let text = sender.titleLabel?.text else { return }
                 var shortcut = UIPasteboard(name: UIPasteboard.Name(text), create: false)?.string
                 
-                if shortcut == nil {
-                    shortcut = shortcut?.defaultShortcut
+                if shortcut == nil || shortcut?.isEmpty == true {
+                    shortcut = text.defaultShortcut
                 }
                 
                 self?.delegate?.insertOther(shortcut ?? "")
