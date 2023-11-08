@@ -103,7 +103,7 @@ extension MainViewController {
     
     enum Constant: CaseIterable {
         
-        static let mainTitle: String = "건디 키보드"
+        static let mainTitle: String = "건디키"
         
         case keyboardSetting
         case information
