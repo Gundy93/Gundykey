@@ -57,7 +57,7 @@ final class KeyboardSettingViewController: UIViewController {
     private let pasteSettingLabel: UILabel = {
         let label = UILabel()
         
-        label.text = Constant.shortcutSetting
+        label.text = Constant.pasteSetting
         label.font = .preferredFont(forTextStyle: .title2)
         label.numberOfLines = 0
         
@@ -66,7 +66,7 @@ final class KeyboardSettingViewController: UIViewController {
     private let pasteSettingPathLabel: UILabel = {
         let label = UILabel()
         
-        label.text = Constant.shortcutSettingPath
+        label.text = Constant.pasteSettingPath
         label.textColor = .systemBlue
         label.numberOfLines = 0
         
