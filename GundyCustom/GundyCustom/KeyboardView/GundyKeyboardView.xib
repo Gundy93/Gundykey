@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,6 +37,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅃ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Pum-if-C6D"/>
@@ -55,6 +56,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅉ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="yVE-X5-V2w"/>
@@ -73,6 +75,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㄸ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="cHm-Xt-cSV"/>
@@ -91,6 +94,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㄲ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="i4n-5n-Til"/>
@@ -109,6 +113,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅆ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="l78-gG-efN"/>
@@ -363,6 +368,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅂ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Ira-jx-LgB"/>
@@ -381,6 +387,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅈ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="aZ0-LM-RXP"/>
@@ -399,6 +406,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㄷ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="fqm-ZC-nxI"/>
@@ -417,6 +425,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㄱ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="82e-vg-Kf7"/>
@@ -435,6 +444,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅅ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="xM9-zw-wxS"/>
@@ -688,6 +698,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅁ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="dKl-BY-DI4"/>
@@ -706,6 +717,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㄴ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="gIO-xB-VEZ"/>
@@ -724,6 +736,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅇ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="et4-Bd-YAs"/>
@@ -742,6 +755,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㄹ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="iSs-H5-XpE"/>
@@ -760,6 +774,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅎ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="M46-Tb-HdY"/>
@@ -1029,6 +1044,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅋ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Rgt-fK-gB6"/>
@@ -1047,6 +1063,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅌ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="NyC-B6-PyE"/>
@@ -1065,6 +1082,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅊ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="WKN-1U-NYF"/>
@@ -1083,6 +1101,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="ㅍ"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="gTh-Ub-5xs"/>

@@ -18,10 +18,50 @@ final class KeyButton: UIButton {
         }
     }
     
+    @IBInspectable var text: String? {
+        set {
+            guard let text = newValue else { return }
+            
+            var shortcut = UIPasteboard(name: UIPasteboard.Name(text), create: false)?.string
+            
+            if shortcut == nil || shortcut?.isEmpty == true {
+                shortcut = text.defaultShortcut
+            }
+            
+            guard let firstText = shortcut?.first else { return } 
+            
+            previewLabel.text = String(firstText)
+        }
+        get {
+            return titleLabel?.text
+        }
+    }
+    
+    private let previewLabel: UILabel = {
+        let label = UILabel()
+        
+        label.font = .systemFont(ofSize: 12)
+        label.textColor = .label
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }()
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
+        configureViewHierarchy()
+    }
+    
+    private func configureViewHierarchy() {
         configureShadow()
+        
+        addSubview(previewLabel)
+        
+        NSLayoutConstraint.activate([
+            previewLabel.topAnchor.constraint(equalTo: topAnchor, constant: 4),
+            previewLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4)
+        ])
     }
     
     private func configureShadow() {

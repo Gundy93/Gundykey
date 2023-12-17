@@ -142,6 +142,8 @@ extension ShortcutViewController {
                                          설정한 단축키는 해당 키를 0.5초간 누르면 입력됩니다.
                                          
                                          'ㅃ'부터 'ㅅ'까지는 미설정 시 '1'부터 '0'까지의 숫자가 기본값으로 입력됩니다.
+                                         
+                                         단축키의 첫 글자가 버튼에 표시됩니다.
                                          """
         static let consonants: [String] = ["ㅃ", "ㅉ", "ㄸ", "ㄲ", "ㅆ", "ㅂ", "ㅈ", "ㄷ", "ㄱ", "ㅅ", "ㅁ", "ㄴ", "ㅇ", "ㄹ", "ㅎ", "ㅋ", "ㅌ", "ㅊ", "ㅍ"]
         static let labelPlaceHolder: String = "지정된 단축키가 없습니다."
