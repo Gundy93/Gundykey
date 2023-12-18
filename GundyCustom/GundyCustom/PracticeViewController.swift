@@ -44,7 +44,7 @@ final class PracticeViewController: UIViewController {
     }()
     private var customKeyboardView: GundyKeyboardView!
     private var lastInput: KoreanType = .other
-    private var lastWords: [(text: String, type: KoreanType)] = []
+    private var lastWords: [(text: Int, type: KoreanType)] = []
     private var lastIndex: UITextRange?
 
     override func viewDidLoad() {
@@ -106,50 +106,47 @@ extension PracticeViewController: GundyKeyboardViewDelegate {
         
         if isInitialConsonant {
             lastWords.removeAll()
-        } else if lastInput != .neuter {
+            lastWords.append((consonant, .initialConsonant))
+            practiceTextField.insertText(newCharacter)
+        } else {
+            lastWords.append((consonant, .finalConsonant(character: newCharacter)))
             practiceTextField.deleteBackward()
-            practiceTextField.insertText(lastWords[0].text)
-            practiceTextField.insertText(lastWords[1].text)
+            practiceTextField.insertText(makeWord())
         }
         
-        practiceTextField.insertText(consonant)
         lastInput = isInitialConsonant ? .initialConsonant : .finalConsonant(character: newCharacter)
-        lastWords.append((consonant, lastInput))
         lastIndex = practiceTextField.selectedTextRange
     }
     
     func insertVowel(_ newCharacter: String) {
         resetIfNeeded()
         
-        var vowel = newCharacter
+        var text = newCharacter
+        
         switch lastInput {
         case .initialConsonant:
-            let consonant = lastWords[0].text.toUnicodeConsonant(isInitialConsonant: true)
-            
             practiceTextField.deleteBackward()
-            practiceTextField.insertText(consonant)
-            lastWords[0].text = consonant
-            
-            vowel = vowel.toUnicodeVowel()
+            lastWords.append((text.toUnicodeVowel(), .neuter))
+            text = makeWord()
         case .finalConsonant(character: let consonant):
             practiceTextField.deleteBackward()
-            for index in 0...lastWords.count - 2 {
-                practiceTextField.insertText(lastWords[index].text)
-            }
-            insertConsonant(consonant.toUnicodeConsonant(isInitialConsonant: true))
-            
-            vowel = vowel.toUnicodeVowel()
+            lastWords.removeLast()
+            practiceTextField.insertText(makeWord())
+            lastWords.removeAll()
+            lastWords.append((consonant.toUnicodeConsonant(isInitialConsonant: true), .initialConsonant))
+            lastWords.append((text.toUnicodeVowel(), .neuter))
+            text = makeWord()
         default:
             lastWords.removeAll()
-            
             lastInput = .other
         }
         
-        practiceTextField.insertText(vowel)
+        practiceTextField.insertText(text)
+        
         if lastWords.isEmpty == false {
             lastInput = .neuter
-            lastWords.append((vowel, .neuter))
         }
+        
         lastIndex = practiceTextField.selectedTextRange
     }
     
@@ -171,48 +168,69 @@ extension PracticeViewController: GundyKeyboardViewDelegate {
         
         guard let last = lastWords.last else {
             lastInput = .other
+            
             return
         }
         
         lastInput = last.type
-        lastWords.forEach { practiceTextField.insertText($0.text) }
+        
+        if lastWords.count == 1 {
+            practiceTextField.insertText(last.text.toConsonant())
+        } else {
+            practiceTextField.insertText(makeWord())
+        }
     }
     
-    private func convert(_ newCharacter: String) -> (consonant: String, isInitialConsonant: Bool) {
+    private func convert(_ newCharacter: String) -> (consonant: Int, isInitialConsonant: Bool) {
         switch lastInput {
         case .neuter:
             let isInitialConsonant = ["ㄸ", "ㅃ", "ㅉ"].contains(newCharacter)
-            return isInitialConsonant ? (newCharacter, isInitialConsonant) : (newCharacter.toUnicodeConsonant(isInitialConsonant: false), isInitialConsonant)
+            return (newCharacter.toUnicodeConsonant(isInitialConsonant: isInitialConsonant), isInitialConsonant)
         case .finalConsonant(character: let finalConsonant):
             switch (finalConsonant, newCharacter) {
             case ("ㄱ", "ㅅ"):
-                return ("\u{11AA}", false)
+                return (4522, false)
             case ("ㄴ", "ㅈ"):
-                return ("\u{11AC}", false)
+                return (4524, false)
             case ("ㄴ", "ㅎ"):
-                return ("\u{11AD}", false)
+                return (4525, false)
             case ("ㄹ", "ㄱ"):
-                return ("\u{11B0}", false)
+                return (4528, false)
             case ("ㄹ", "ㅁ"):
-                return ("\u{11B1}", false)
+                return (4529, false)
             case ("ㄹ", "ㅂ"):
-                return ("\u{11B2}", false)
+                return (4530, false)
             case ("ㄹ", "ㅅ"):
-                return ("\u{11B3}", false)
+                return (4531, false)
             case ("ㄹ", "ㅌ"):
-                return ("\u{11B4}", false)
+                return (4532, false)
             case ("ㄹ", "ㅍ"):
-                return ("\u{11B5}", false)
+                return (4533, false)
             case ("ㄹ", "ㅎ"):
-                return ("\u{11B6}", false)
+                return (4534, false)
             case ("ㅂ", "ㅅ"):
-                return ("\u{11B9}", false)
+                return (4537, false)
             default:
-                return (newCharacter, true)
+                return (newCharacter.toUnicodeConsonant(isInitialConsonant: true), true)
             }
         default:
-            return (newCharacter, true)
+            return (newCharacter.toUnicodeConsonant(isInitialConsonant: true), true)
         }
+    }
+    
+    private func makeWord() -> String {
+        var number = 44032 + ((lastWords[0].text - 4352) * 588) + ((lastWords[1].text - 4449) * 28)
+        
+        switch lastWords.count {
+        case 3:
+            number += lastWords[2].text - 4519
+        case 4:
+            number += lastWords[3].text - 4519
+        default:
+            break
+        }
+        
+        return String(UnicodeScalar(number)!)
     }
     
     private func resetIfNeeded() {

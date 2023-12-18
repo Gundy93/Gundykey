@@ -24,6 +24,8 @@
 		BFA275402AF375F900A3ACFA /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA2753F2AF375F900A3ACFA /* InformationViewController.swift */; };
 		BFA275422AF37CA500A3ACFA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA275412AF37CA500A3ACFA /* InformationCell.swift */; };
 		BFA275442AF387B900A3ACFA /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA275432AF387B900A3ACFA /* PracticeViewController.swift */; };
+		BFA7083B2B309900000497B4 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7083A2B309900000497B4 /* Int+.swift */; };
+		BFA7083C2B309B99000497B4 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7083A2B309900000497B4 /* Int+.swift */; };
 		BFC8C58F2AE8E50D0084E61B /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872C32ADFDD3B00C00F66 /* String+.swift */; };
 		BFC8C5902AE8E5100084E61B /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6081702AE6EFC6005C0C69 /* UIDevice+.swift */; };
 		BFC8C5912AE8E5120084E61B /* KoreanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5872C12ADFA48600C00F66 /* KoreanType.swift */; };
@@ -82,6 +84,7 @@
 		BFA2753F2AF375F900A3ACFA /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		BFA275412AF37CA500A3ACFA /* InformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
 		BFA275432AF387B900A3ACFA /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		BFA7083A2B309900000497B4 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		BFC8C5972AEA08BF0084E61B /* KeyboardSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSettingViewController.swift; sourceTree = "<group>"; };
 		BFC8C5992AEA4B570084E61B /* ShortcutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutViewController.swift; sourceTree = "<group>"; };
 		BFC8C59F2AEA568D0084E61B /* ShortcutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutCell.swift; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 			children = (
 				BF5872942ADBA7C900C00F66 /* AppDelegate.swift */,
 				BF5872962ADBA7C900C00F66 /* SceneDelegate.swift */,
+				BFA7083A2B309900000497B4 /* Int+.swift */,
 				BF5872C32ADFDD3B00C00F66 /* String+.swift */,
 				BF6081702AE6EFC6005C0C69 /* UIDevice+.swift */,
 				BF5872C12ADFA48600C00F66 /* KoreanType.swift */,
@@ -280,6 +284,7 @@
 				BFC8C5A02AEA568D0084E61B /* ShortcutCell.swift in Sources */,
 				BF5872992ADBA7C900C00F66 /* MainViewController.swift in Sources */,
 				BF5872C02ADD252800C00F66 /* GundyKeyboardViewDelegate.swift in Sources */,
+				BFA7083B2B309900000497B4 /* Int+.swift in Sources */,
 				BF5872952ADBA7C900C00F66 /* AppDelegate.swift in Sources */,
 				BF5872972ADBA7C900C00F66 /* SceneDelegate.swift in Sources */,
 				BFC8C59A2AEA4B570084E61B /* ShortcutViewController.swift in Sources */,
@@ -294,6 +299,7 @@
 				BFC8C5932AE8E5230084E61B /* GundyKeyboardView.swift in Sources */,
 				BFC8C58F2AE8E50D0084E61B /* String+.swift in Sources */,
 				BFC8C5912AE8E5120084E61B /* KoreanType.swift in Sources */,
+				BFA7083C2B309B99000497B4 /* Int+.swift in Sources */,
 				BFC8C5952AE8E5230084E61B /* GundyKeyboardViewDelegate.swift in Sources */,
 				BFC8C5942AE8E5230084E61B /* KeyButton.swift in Sources */,
 				BFC8C5902AE8E5100084E61B /* UIDevice+.swift in Sources */,

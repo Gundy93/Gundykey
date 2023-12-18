@@ -34,97 +34,97 @@ extension String {
         }
     }
     
-    func toUnicodeConsonant(isInitialConsonant: Bool) -> String {
+    func toUnicodeConsonant(isInitialConsonant: Bool) -> Int {
         switch self {
         case "ㄱ":
-            return isInitialConsonant ? "\u{1100}" : "\u{11A8}"
+            return isInitialConsonant ? 4352 : 4520
         case "ㄲ":
-            return isInitialConsonant ? "\u{1101}" : "\u{11A9}"
+            return isInitialConsonant ? 4353 : 4521
         case "ㄴ":
-            return isInitialConsonant ? "\u{1102}" : "\u{11AB}"
+            return isInitialConsonant ? 4354 : 4523
         case "ㄷ":
-            return isInitialConsonant ? "\u{1103}" : "\u{11AE}"
+            return isInitialConsonant ? 4355 : 4526
         case "ㄸ":
-            return "\u{1104}"
+            return 4356
         case "ㄹ":
-            return isInitialConsonant ? "\u{1105}" : "\u{11AF}"
+            return isInitialConsonant ? 4357 : 4527
         case "ㅁ":
-            return isInitialConsonant ? "\u{1106}" : "\u{11B7}"
+            return isInitialConsonant ? 4358 : 4535
         case "ㅂ":
-            return isInitialConsonant ? "\u{1107}" : "\u{11B8}"
+            return isInitialConsonant ? 4359 : 4536
         case "ㅃ":
-            return "\u{1108}"
+            return 4360
         case "ㅅ":
-            return isInitialConsonant ? "\u{1109}" : "\u{11BA}"
+            return isInitialConsonant ? 4361 : 4538
         case "ㅆ":
-            return isInitialConsonant ? "\u{110A}" : "\u{11BB}"
+            return isInitialConsonant ? 4362 : 4539
         case "ㅇ":
-            return isInitialConsonant ? "\u{110B}" : "\u{11BC}"
+            return isInitialConsonant ? 4363 : 4540
         case "ㅈ":
-            return isInitialConsonant ? "\u{110C}" : "\u{11BD}"
+            return isInitialConsonant ?  4364 : 4541
         case "ㅉ":
-            return "\u{110D}"
+            return 4365
         case "ㅊ":
-            return isInitialConsonant ? "\u{110E}" : "\u{11BE}"
+            return isInitialConsonant ?  4366 : 4542
         case "ㅋ":
-            return isInitialConsonant ? "\u{110F}" : "\u{11BF}"
+            return isInitialConsonant ?  4367 : 4543
         case "ㅌ":
-            return isInitialConsonant ? "\u{1110}" : "\u{11C0}"
+            return isInitialConsonant ?  4368 : 4544
         case "ㅍ":
-            return isInitialConsonant ? "\u{1111}" : "\u{11C1}"
+            return isInitialConsonant ?  4369 : 4545
         case "ㅎ":
-            return isInitialConsonant ? "\u{1112}" : "\u{11C2}"
+            return isInitialConsonant ?  4370 : 4546
         default:
-            return self
+            return 0
         }
     }
     
-    func toUnicodeVowel() -> String {
+    func toUnicodeVowel() -> Int {
         switch self {
         case "ㅏ":
-            return "\u{1161}"
+            return 4449
         case "ㅐ":
-            return "\u{1162}"
+            return 4450
         case "ㅑ":
-            return "\u{1163}"
+            return 4451
         case "ㅒ":
-            return "\u{1164}"
+            return 4452
         case "ㅓ":
-            return "\u{1165}"
+            return 4453
         case "ㅔ":
-            return "\u{1166}"
+            return 4454
         case "ㅕ":
-            return "\u{1167}"
+            return 4455
         case "ㅖ":
-            return "\u{1168}"
+            return 4456
         case "ㅗ":
-            return "\u{1169}"
+            return 4457
         case "ㅘ":
-            return "\u{116A}"
+            return 4458
         case "ㅙ":
-            return "\u{116B}"
+            return 4459
         case "ㅚ":
-            return "\u{116C}"
+            return 4460
         case "ㅛ":
-            return "\u{116D}"
+            return 4461
         case "ㅜ":
-            return "\u{116E}"
+            return 4462
         case "ㅝ":
-            return "\u{116F}"
+            return 4463
         case "ㅞ":
-            return "\u{1170}"
+            return 4464
         case "ㅟ":
-            return "\u{1171}"
+            return 4465
         case "ㅠ":
-            return "\u{1172}"
+            return 4466
         case "ㅡ":
-            return "\u{1173}"
+            return 4467
         case "ㅢ":
-            return "\u{1174}"
+            return 4468
         case "ㅣ":
-            return "\u{1175}"
+            return 4469
         default:
-            return self
+            return 0
         }
     }
 }
