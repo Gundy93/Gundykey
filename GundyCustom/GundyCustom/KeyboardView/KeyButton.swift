@@ -66,4 +66,21 @@ final class KeyButton: UIButton {
         
         previewLabel.text = String(firstText)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        KeyButton.selectionFeedbackGenerator.selectionChanged()
+    }
+}
+
+extension KeyButton {
+    
+    static let selectionFeedbackGenerator: UISelectionFeedbackGenerator = {
+        let generator = UISelectionFeedbackGenerator()
+        
+        generator.prepare()
+        
+        return generator
+    }()
 }

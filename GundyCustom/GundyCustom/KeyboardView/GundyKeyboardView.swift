@@ -286,6 +286,7 @@ extension GundyKeyboardView {
                     }
                     
                     self?.remove()
+                    KeyButton.selectionFeedbackGenerator.selectionChanged()
                 }
             }
         default:
