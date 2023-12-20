@@ -20,11 +20,16 @@ final class GundyKeyboardView: UIInputView {
     @IBOutlet var koreanLanguageViews: [UIView]!
     @IBOutlet var numberViews: [UIView]!
     @IBOutlet var specialCharacterViews: [UIView]!
+    @IBOutlet var consonantButtons: [KeyButton]!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         configureGestureRecognizer()
+    }
+    
+    func setPreview() {
+        consonantButtons.forEach { $0.setPreviewLabel() }
     }
     
     private func configureGestureRecognizer() {

@@ -19,6 +19,12 @@ final class KeyboardViewController: UIInputViewController {
         
         configureInputView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        customKeyboardView.setPreview()
+    }
 
     private func configureInputView() {
         let nib = UINib(nibName: "GundyKeyboardView",

@@ -18,25 +18,6 @@ final class KeyButton: UIButton {
         }
     }
     
-    @IBInspectable var text: String? {
-        set {
-            guard let text = newValue else { return }
-            
-            var shortcut = UIPasteboard(name: UIPasteboard.Name(text), create: false)?.string
-            
-            if shortcut == nil || shortcut?.isEmpty == true {
-                shortcut = text.defaultShortcut
-            }
-            
-            guard let firstText = shortcut?.first else { return } 
-            
-            previewLabel.text = String(firstText)
-        }
-        get {
-            return titleLabel?.text
-        }
-    }
-    
     private let previewLabel: UILabel = {
         let label = UILabel()
         
@@ -70,5 +51,19 @@ final class KeyButton: UIButton {
         layer.shadowOffset = CGSize(width: 0, height: 1)
         layer.shadowOpacity = 0.2
         layer.shadowRadius = 0
+    }
+    
+    func setPreviewLabel() {
+        guard let text = titleLabel?.text else { return }
+        
+        var shortcut = UIPasteboard(name: UIPasteboard.Name(text), create: false)?.string
+        
+        if shortcut == nil || shortcut?.isEmpty == true {
+            shortcut = text.defaultShortcut
+        }
+        
+        guard let firstText = shortcut?.first else { return }
+        
+        previewLabel.text = String(firstText)
     }
 }
