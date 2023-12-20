@@ -1329,7 +1329,8 @@
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="0UT-je-8di"/>
-                                        <action selector="removeCharacter:" destination="iN0-l3-epB" eventType="touchUpInside" id="4bd-8G-dFI"/>
+                                        <action selector="removeCharacter:" destination="iN0-l3-epB" eventType="touchDown" id="jEQ-N7-npg"/>
+                                        <action selector="touchUpRemoveButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Sad-A3-rOl"/>
                                     </connections>
                                 </button>
                             </subviews>

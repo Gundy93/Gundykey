@@ -238,8 +238,15 @@ extension GundyKeyboardView {
     }
     
     @IBAction func removeCharacter(_ sender: KeyButton) {
+        remove()
+    }
+    
+    private func remove() {
         delegate?.removeCharacter()
         UIDevice.current.playDeleteClick()
+    }
+    
+    @IBAction func touchUpRemoveButton(_ sender: KeyButton) {
         timer?.invalidate()
     }
     
@@ -248,6 +255,8 @@ extension GundyKeyboardView {
     }
     
     @IBAction func didBeginLongPress(_ sender: KeyButton) {
+        timer?.invalidate()
+        
         switch sender.tag {
         case 1:
             timer = Timer.scheduledTimer(withTimeInterval: 0.5,
@@ -271,8 +280,7 @@ extension GundyKeyboardView {
                         return
                     }
                     
-                    self?.delegate?.removeCharacter()
-                    UIDevice.current.playDeleteClick()
+                    self?.remove()
                 }
             }
         default:
