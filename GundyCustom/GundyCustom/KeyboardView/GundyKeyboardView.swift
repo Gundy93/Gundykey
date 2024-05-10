@@ -16,7 +16,10 @@ final class GundyKeyboardView: UIInputView {
     private var timer: Timer?
     private var startPoint: CGPoint?
     private var lastDirection: Direction?
-    @IBOutlet weak var inputModeSwitch: KeyButton!
+    private var isCursorMove: Bool = false
+    @IBOutlet var containerStackView: UIStackView!
+    @IBOutlet var pasteInBackgroundView: UIView!
+    @IBOutlet var inputModeSwitch: [UIView]!
     @IBOutlet var koreanLanguageViews: [UIView]!
     @IBOutlet var numberViews: [UIView]!
     @IBOutlet var specialCharacterViews: [UIView]!
@@ -33,10 +36,14 @@ final class GundyKeyboardView: UIInputView {
     }
     
     private func configureGestureRecognizer() {
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self,
-                                             action: #selector(drag))
-        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self,
-                                                                      action: #selector(longPress))
+        let panGestureRecognizer = UIPanGestureRecognizer(
+            target: self,
+            action: #selector(drag)
+        )
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(
+            target: self,
+            action: #selector(longPress)
+        )
         
         addGestureRecognizer(panGestureRecognizer)
         addGestureRecognizer(longPressGestureRecognizer)
@@ -44,6 +51,35 @@ final class GundyKeyboardView: UIInputView {
     
     @objc
     private func drag(_ sender: UIPanGestureRecognizer) {
+        if isCursorMove {
+            dragToMoveCursor(sender)
+        } else {
+            dragToInputVowel(sender)
+        }
+    }
+    
+    private func dragToMoveCursor(_ sender: UIPanGestureRecognizer) {
+        guard let startPoint else {
+            startPoint = sender.location(in: self)
+            
+            return
+        }
+        
+        let point = sender.location(in: self)
+        
+        print(abs(point.x - startPoint.x), abs(point.y - startPoint.y))
+        
+        guard abs(point.x - startPoint.x) > 100 || abs(point.y - startPoint.y) > 100 else { return }
+        
+        let velocity = sender.velocity(in: self)
+        
+        guard let direction = convertToDirection(
+            x: velocity.x,
+            y: velocity.y
+        ) else { return }
+    }
+    
+    private func dragToInputVowel(_ sender: UIPanGestureRecognizer) {
         timer?.invalidate()
         
         let velocity = sender.velocity(in: self)
@@ -80,6 +116,15 @@ final class GundyKeyboardView: UIInputView {
     private func longPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .ended {
             timer?.invalidate()
+            
+            if isCursorMove {
+                timer = Timer.scheduledTimer(
+                    withTimeInterval: 0.5,
+                    repeats: false
+                ) { [weak self] _ in
+                    self?.endMovingCursor()
+                }
+            }
         }
     }
     
@@ -92,7 +137,7 @@ final class GundyKeyboardView: UIInputView {
         guard abs(x) + abs(y) > 10,
               let direction = convertToDirection(x: x,
                                                  y: y) else { return }
-              
+        
         directions.append(direction)
         self.startPoint = point
         lastDirection = nil
@@ -251,6 +296,16 @@ extension GundyKeyboardView {
         UIDevice.current.playDeleteClick()
     }
     
+    @IBAction func touchUpSpaceBar(_ sender: KeyButton) {
+        timer?.invalidate()
+        endMovingCursor()
+    }
+    
+    private func endMovingCursor() {
+        isCursorMove = false
+        containerStackView.isHidden = false
+    }
+    
     @IBAction func touchUpRemoveButton(_ sender: KeyButton) {
         timer?.invalidate()
     }
@@ -264,10 +319,15 @@ extension GundyKeyboardView {
         
         switch sender.tag {
         case 1:
-            timer = Timer.scheduledTimer(withTimeInterval: 0.5,
-                                         repeats: false) { [weak self] _ in
+            timer = Timer.scheduledTimer(
+                withTimeInterval: 0.5,
+                repeats: false
+            ) { [weak self] _ in
                 guard let text = sender.titleLabel?.text else { return }
-                var shortcut = UIPasteboard(name: UIPasteboard.Name(text), create: false)?.string
+                var shortcut = UIPasteboard(
+                    name: UIPasteboard.Name(text),
+                    create: false
+                )?.string
                 
                 if shortcut == nil || shortcut?.isEmpty == true {
                     shortcut = text.defaultShortcut
@@ -277,9 +337,14 @@ extension GundyKeyboardView {
                 UIDevice.current.playInputClick()
             }
         case 2:
-            timer = Timer.scheduledTimer(withTimeInterval: 0.5,
-                                         repeats: false) { [weak self] _ in
-                self?.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            timer = Timer.scheduledTimer(
+                withTimeInterval: 0.5,
+                repeats: false
+            ) { [weak self] _ in
+                self?.timer = Timer.scheduledTimer(
+                    withTimeInterval: 0.1,
+                    repeats: true
+                ) { _ in
                     guard self?.delegate?.isRemovable == true else {
                         self?.timer?.invalidate()
                         return
@@ -288,6 +353,14 @@ extension GundyKeyboardView {
                     self?.remove()
                     KeyButton.selectionFeedbackGenerator.selectionChanged()
                 }
+            }
+        case 3:
+            timer = Timer.scheduledTimer(
+                withTimeInterval: 0.5,
+                repeats: false
+            ) { [weak self] _ in
+                self?.isCursorMove = true
+                self?.containerStackView.isHidden = true
             }
         default:
             break
@@ -314,6 +387,7 @@ extension GundyKeyboardView {
         numberViews.forEach {
             $0.isHidden = false
         }
+        pasteInBackgroundView.backgroundColor = .systemGray3
         UIDevice.current.playModifierClick()
     }
     
@@ -340,6 +414,7 @@ extension GundyKeyboardView {
         koreanLanguageViews.forEach {
             $0.isHidden = false
         }
+        pasteInBackgroundView.backgroundColor = .systemGray5
         UIDevice.current.playModifierClick()
     }
 }

@@ -18,6 +18,15 @@ final class KeyButton: UIButton {
         }
     }
     
+    @IBInspectable var isNormalKey: Bool {
+        set {
+            isNormal = newValue
+        }
+        get {
+            return isNormal
+        }
+    }
+    
     private let previewLabel: UILabel = {
         let label = UILabel()
         
@@ -27,6 +36,8 @@ final class KeyButton: UIButton {
         
         return label
     }()
+    
+    private var isNormal: Bool = false
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

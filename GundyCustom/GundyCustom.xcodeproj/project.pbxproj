@@ -37,6 +37,7 @@
 		BFC8C5982AEA08BF0084E61B /* KeyboardSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8C5972AEA08BF0084E61B /* KeyboardSettingViewController.swift */; };
 		BFC8C59A2AEA4B570084E61B /* ShortcutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8C5992AEA4B570084E61B /* ShortcutViewController.swift */; };
 		BFC8C5A02AEA568D0084E61B /* ShortcutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8C59F2AEA568D0084E61B /* ShortcutCell.swift */; };
+		BFEE9B852BEE182200984283 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEE9B842BEE182200984283 /* RoundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		BFC8C5972AEA08BF0084E61B /* KeyboardSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSettingViewController.swift; sourceTree = "<group>"; };
 		BFC8C5992AEA4B570084E61B /* ShortcutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutViewController.swift; sourceTree = "<group>"; };
 		BFC8C59F2AEA568D0084E61B /* ShortcutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutCell.swift; sourceTree = "<group>"; };
+		BFEE9B842BEE182200984283 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				BF5872BD2ADD23CC00C00F66 /* GundyKeyboardView.swift */,
 				BF5872BF2ADD252800C00F66 /* GundyKeyboardViewDelegate.swift */,
 				BF5872BB2ADD140900C00F66 /* KeyButton.swift */,
+				BFEE9B842BEE182200984283 /* RoundView.swift */,
 			);
 			path = KeyboardView;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				BFA275402AF375F900A3ACFA /* InformationViewController.swift in Sources */,
 				BF5872BE2ADD23CC00C00F66 /* GundyKeyboardView.swift in Sources */,
 				BFA275422AF37CA500A3ACFA /* InformationCell.swift in Sources */,
+				BFEE9B852BEE182200984283 /* RoundView.swift in Sources */,
 				BFA275442AF387B900A3ACFA /* PracticeViewController.swift in Sources */,
 				BF6081712AE6EFC6005C0C69 /* UIDevice+.swift in Sources */,
 				BF5872C22ADFA48600C00F66 /* KoreanType.swift in Sources */,

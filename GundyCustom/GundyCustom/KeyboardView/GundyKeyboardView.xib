@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,6 +16,349 @@
             <rect key="frame" x="0.0" y="0.0" width="340" height="298"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5bT-Fm-7u9">
+                    <rect key="frame" x="8" y="8" width="324" height="248"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H6K-Lg-aVD">
+                            <rect key="frame" x="0.0" y="0.0" width="324" height="40"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PqT-Pw-G0U">
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hg5-Um-aZR" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfa-mJ-hv5" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Iz-TU-epZ" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ZO-zi-P2Y" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-QG-Cjj" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpm-xg-DL9" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="270" y="0.0" width="23" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p0I-mK-aDt" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="301" y="0.0" width="23" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="bpm-xg-DL9" firstAttribute="width" secondItem="p0I-mK-aDt" secondAttribute="width" id="Nzg-k6-OGt"/>
+                                <constraint firstItem="Bqq-QG-Cjj" firstAttribute="width" secondItem="bpm-xg-DL9" secondAttribute="width" multiplier="2" id="kDm-1m-mbJ"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tvI-iH-lBF">
+                            <rect key="frame" x="0.0" y="52" width="324" height="40"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EiN-tA-tYo">
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OA6-Rw-B5j" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykP-AY-wPY" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-8P-P6u" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MtJ-jG-JDs" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxA-CM-SJx" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A3-cY-f6L" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="270" y="0.0" width="23" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNg-Yv-cLr" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="301" y="0.0" width="23" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="gxA-CM-SJx" firstAttribute="width" secondItem="7A3-cY-f6L" secondAttribute="width" multiplier="2" id="LPy-DJ-tZX"/>
+                                <constraint firstItem="7A3-cY-f6L" firstAttribute="width" secondItem="wNg-Yv-cLr" secondAttribute="width" id="UCu-qB-aF1"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hUW-5q-LBk">
+                            <rect key="frame" x="0.0" y="104" width="324" height="40"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-Zt-wv7">
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzB-Ej-oPI" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61d-Qp-sou" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rl-RP-Lap" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50L-eK-zhB" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXn-e9-YOz" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3e-0q-OXo" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="270" y="0.0" width="54" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WzS-ab-gIe">
+                            <rect key="frame" x="0.0" y="156" width="324" height="40"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7SV-bf-k9g">
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17s-0B-oRk" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5L-yr-TjD" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="54" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooS-6H-azg" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xb7-TN-ygy" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="162" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dst-2i-us1" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="216" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTb-ud-9FP" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="270" y="0.0" width="54" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n6M-NZ-iDa">
+                            <rect key="frame" x="0.0" y="208" width="324" height="40"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AbH-Ym-muv">
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3O-Dz-Rdp" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLm-iA-kUg" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="54" y="0.0" width="23" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7j-F6-Cdn" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                            <rect key="frame" x="85" y="0.0" width="177" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aLm-iA-kUg" firstAttribute="width" secondItem="J3O-Dz-Rdp" secondAttribute="width" multiplier="0.5" id="13t-U8-Rsm"/>
+                                    </constraints>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23A-RD-ae0" customClass="RoundView" customModule="GundyCustom" customModuleProvider="target">
+                                    <rect key="frame" x="270" y="0.0" width="54" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="S3e-0q-OXo" firstAttribute="leading" secondItem="7A3-cY-f6L" secondAttribute="leading" id="Vaj-Q6-4Yh"/>
+                        <constraint firstItem="PTb-ud-9FP" firstAttribute="leading" secondItem="S3e-0q-OXo" secondAttribute="leading" id="W2q-2j-9Zf"/>
+                        <constraint firstItem="23A-RD-ae0" firstAttribute="leading" secondItem="PTb-ud-9FP" secondAttribute="leading" id="Xeu-Ez-HA1"/>
+                        <constraint firstItem="J3O-Dz-Rdp" firstAttribute="width" secondItem="17s-0B-oRk" secondAttribute="width" id="iID-xK-yay"/>
+                        <constraint firstItem="aLm-iA-kUg" firstAttribute="leading" secondItem="t5L-yr-TjD" secondAttribute="leading" id="nhC-jO-WQe"/>
+                    </constraints>
+                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xUo-Zy-YNq">
                     <rect key="frame" x="8" y="8" width="324" height="248"/>
                     <subviews>
@@ -37,6 +380,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Pum-if-C6D"/>
@@ -55,6 +399,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="yVE-X5-V2w"/>
@@ -73,6 +418,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="cHm-Xt-cSV"/>
@@ -91,6 +437,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="i4n-5n-Til"/>
@@ -109,6 +456,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="l78-gG-efN"/>
@@ -116,12 +464,6 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="dPF-Hj-HuY" firstAttribute="width" secondItem="Qc6-Bf-aS8" secondAttribute="width" id="B0N-NT-PXT"/>
-                                        <constraint firstItem="GsT-z9-k0X" firstAttribute="width" secondItem="Qc6-Bf-aS8" secondAttribute="width" id="Yft-TK-W6h"/>
-                                        <constraint firstItem="ynZ-sy-SSA" firstAttribute="width" secondItem="Qc6-Bf-aS8" secondAttribute="width" id="eSZ-or-rJ5"/>
-                                        <constraint firstItem="UVS-v1-2po" firstAttribute="width" secondItem="Qc6-Bf-aS8" secondAttribute="width" id="xnr-TB-g6m"/>
-                                    </constraints>
                                 </stackView>
                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rgb-k9-HPQ" userLabel="number">
                                     <rect key="frame" x="266" y="0.0" width="262" height="40"/>
@@ -138,6 +480,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="Gdj-oL-AtN"/>
@@ -155,6 +498,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="sT2-HP-y1b"/>
@@ -172,6 +516,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="MsX-wp-CZK"/>
@@ -189,6 +534,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="FsA-Ke-5c3"/>
@@ -206,6 +552,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="v5S-zT-cDr"/>
@@ -228,6 +575,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="dko-Vq-Lex"/>
@@ -245,6 +593,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fk2-U5-OtM"/>
@@ -262,6 +611,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="OR6-mG-58S"/>
@@ -279,6 +629,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="JpK-Hg-yUr"/>
@@ -296,6 +647,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="orU-Dm-7Lx"/>
@@ -315,6 +667,7 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="npf-ZF-buM"/>
@@ -332,6 +685,7 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="lrc-jG-oKy"/>
@@ -363,6 +717,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Ira-jx-LgB"/>
@@ -381,6 +736,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="aZ0-LM-RXP"/>
@@ -399,6 +755,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="fqm-ZC-nxI"/>
@@ -417,6 +774,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="82e-vg-Kf7"/>
@@ -435,6 +793,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="xM9-zw-wxS"/>
@@ -442,12 +801,6 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="g8Y-ek-PFC" firstAttribute="width" secondItem="F4E-cN-s7B" secondAttribute="width" id="2sQ-OW-E0Q"/>
-                                        <constraint firstItem="h9J-Qs-1ZI" firstAttribute="width" secondItem="F4E-cN-s7B" secondAttribute="width" id="FJQ-TG-OXf"/>
-                                        <constraint firstItem="jzI-iI-dMU" firstAttribute="width" secondItem="F4E-cN-s7B" secondAttribute="width" id="Nzx-1R-DQ6"/>
-                                        <constraint firstItem="eaI-Sm-fgB" firstAttribute="width" secondItem="F4E-cN-s7B" secondAttribute="width" id="eSl-iC-Qae"/>
-                                    </constraints>
                                 </stackView>
                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-Mb-nkb" userLabel="number">
                                     <rect key="frame" x="266" y="0.0" width="262" height="40"/>
@@ -464,6 +817,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="32d-ad-stS"/>
@@ -481,6 +835,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="S13-id-BpF"/>
@@ -498,6 +853,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="Hc2-VT-b4C"/>
@@ -515,6 +871,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="tRk-UD-Od5"/>
@@ -532,6 +889,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="cXX-3s-Yxj"/>
@@ -554,6 +912,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="iHh-3Z-7VS"/>
@@ -571,6 +930,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="gug-uY-ZZT"/>
@@ -588,6 +948,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="V3X-6q-Rxg"/>
@@ -605,6 +966,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="hXB-bE-IJH"/>
@@ -622,6 +984,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="eBB-MV-Mb5"/>
@@ -641,6 +1004,7 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="rzq-h7-Qbe"/>
@@ -658,6 +1022,7 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="REm-S7-54v"/>
@@ -688,6 +1053,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="dKl-BY-DI4"/>
@@ -706,6 +1072,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="gIO-xB-VEZ"/>
@@ -724,6 +1091,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="et4-Bd-YAs"/>
@@ -742,6 +1110,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="iSs-H5-XpE"/>
@@ -760,6 +1129,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="M46-Tb-HdY"/>
@@ -767,12 +1137,6 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="4bY-iW-A6S" firstAttribute="width" secondItem="OzS-oS-OXY" secondAttribute="width" id="S5y-oC-8G6"/>
-                                        <constraint firstItem="Nne-t9-VOE" firstAttribute="width" secondItem="OzS-oS-OXY" secondAttribute="width" id="V0W-FY-BYz"/>
-                                        <constraint firstItem="JEb-ld-Gj6" firstAttribute="width" secondItem="OzS-oS-OXY" secondAttribute="width" id="VvZ-Cd-men"/>
-                                        <constraint firstItem="iRZ-sA-Erj" firstAttribute="width" secondItem="OzS-oS-OXY" secondAttribute="width" id="dyt-Ra-8aL"/>
-                                    </constraints>
                                 </stackView>
                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Llj-AW-93G" userLabel="number">
                                     <rect key="frame" x="266" y="0.0" width="262" height="40"/>
@@ -789,6 +1153,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="w1m-5Q-NiA"/>
@@ -806,6 +1171,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="eNQ-Xy-XU3"/>
@@ -823,6 +1189,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="9ee-m4-htG"/>
@@ -840,6 +1207,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="jcU-45-vIH"/>
@@ -857,6 +1225,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="Rff-ou-bYH"/>
@@ -879,6 +1248,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="ejV-5h-t8C"/>
@@ -896,6 +1266,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="jkA-Um-fNM"/>
@@ -913,6 +1284,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="pP0-fG-XKE"/>
@@ -930,6 +1302,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="YAy-ds-p7W"/>
@@ -947,6 +1320,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="lRP-fL-PV6"/>
@@ -966,6 +1340,7 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="pasteInto:" destination="iN0-l3-epB" eventType="touchUpInside" id="ifX-Uz-X1y"/>
@@ -1029,6 +1404,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Rgt-fK-gB6"/>
@@ -1047,6 +1423,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="NyC-B6-PyE"/>
@@ -1065,6 +1442,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="WKN-1U-NYF"/>
@@ -1083,6 +1461,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="gTh-Ub-5xs"/>
@@ -1101,18 +1480,13 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputVowel:" destination="iN0-l3-epB" eventType="touchDown" id="xlf-sr-6cl"/>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="69u-vr-hiV" firstAttribute="width" secondItem="23X-VD-fAh" secondAttribute="width" id="98Y-bP-yKB"/>
-                                        <constraint firstItem="xnW-kM-QvR" firstAttribute="width" secondItem="23X-VD-fAh" secondAttribute="width" id="c6P-Hp-mY6"/>
-                                        <constraint firstItem="r3I-xN-Xqy" firstAttribute="width" secondItem="23X-VD-fAh" secondAttribute="width" id="ev4-xD-vJ0"/>
-                                        <constraint firstItem="jRV-jI-R6E" firstAttribute="width" secondItem="23X-VD-fAh" secondAttribute="width" id="qoN-h0-T9G"/>
-                                    </constraints>
                                 </stackView>
                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="paK-gf-CXL" userLabel="number">
                                     <rect key="frame" x="266" y="0.0" width="262" height="40"/>
@@ -1129,6 +1503,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="aaU-71-agb"/>
@@ -1146,6 +1521,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="V0h-j4-fpJ"/>
@@ -1163,6 +1539,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="djE-5o-YWC"/>
@@ -1180,6 +1557,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="bhM-DQ-HZz"/>
@@ -1197,6 +1575,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="Cqg-cY-7rZ"/>
@@ -1219,6 +1598,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="eSf-Ji-Tjn"/>
@@ -1236,6 +1616,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="DPT-pT-lO8"/>
@@ -1253,6 +1634,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="fMj-1T-4iT"/>
@@ -1270,6 +1652,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="Aw4-u2-dg5"/>
@@ -1287,6 +1670,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="inputOther:" destination="iN0-l3-epB" eventType="touchUpInside" id="bQ8-BY-bX2"/>
@@ -1373,7 +1757,7 @@
                                         <action selector="switchInputMode:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dnb-we-PbC"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gG1-Rd-3hy" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gG1-Rd-3hy" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
                                     <rect key="frame" x="85" y="0.0" width="177" height="40"/>
                                     <color key="backgroundColor" name="NormalKey"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1385,9 +1769,12 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isNormalKey" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
+                                        <action selector="didBeginLongPress:" destination="iN0-l3-epB" eventType="touchDown" id="Gc5-hf-OSF"/>
                                         <action selector="inputSpace:" destination="iN0-l3-epB" eventType="touchUpInside" id="WeV-lQ-d9N"/>
+                                        <action selector="touchUpSpaceBar:" destination="iN0-l3-epB" eventType="touchUpInside" id="Uq5-oB-9jJ"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYc-DG-lJT" customClass="KeyButton" customModule="GundyCustom" customModuleProvider="target">
@@ -1428,31 +1815,18 @@
             <color key="backgroundColor" name="KeyboardBackground"/>
             <constraints>
                 <constraint firstItem="xUo-Zy-YNq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="JUh-1a-KoG"/>
+                <constraint firstItem="5bT-Fm-7u9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="SU8-Nd-Vnr"/>
+                <constraint firstItem="5bT-Fm-7u9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="YtY-S7-qlC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xUo-Zy-YNq" secondAttribute="trailing" constant="8" id="fM0-Zt-zxO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5bT-Fm-7u9" secondAttribute="bottom" constant="8" id="fMv-Ff-TOL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5bT-Fm-7u9" secondAttribute="trailing" constant="8" id="hKV-7R-tbe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xUo-Zy-YNq" secondAttribute="bottom" constant="8" id="miL-xR-KEF"/>
                 <constraint firstItem="xUo-Zy-YNq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="rdp-Z2-4UD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="inputModeSwitch" destination="d7X-YM-zER" id="ymu-Gg-BHi"/>
-                <outletCollection property="koreanLanguageViews" destination="4ZL-qe-1b3" collectionClass="NSMutableArray" id="xIL-KG-9Y5"/>
-                <outletCollection property="numberViews" destination="rgb-k9-HPQ" collectionClass="NSMutableArray" id="cWb-QA-wq5"/>
-                <outletCollection property="koreanLanguageViews" destination="83w-f9-fq9" collectionClass="NSMutableArray" id="vgS-Kc-unQ"/>
-                <outletCollection property="koreanLanguageViews" destination="pSo-ah-N7I" collectionClass="NSMutableArray" id="joL-vK-Ze2"/>
-                <outletCollection property="koreanLanguageViews" destination="3nj-zK-lXe" collectionClass="NSMutableArray" id="eY1-gy-MyA"/>
-                <outletCollection property="koreanLanguageViews" destination="YJq-9C-wFq" collectionClass="NSMutableArray" id="Yc0-C2-tI6"/>
-                <outletCollection property="numberViews" destination="tvR-Mb-nkb" collectionClass="NSMutableArray" id="ars-ii-rFX"/>
-                <outletCollection property="numberViews" destination="Llj-AW-93G" collectionClass="NSMutableArray" id="JON-VF-SCA"/>
-                <outletCollection property="numberViews" destination="paK-gf-CXL" collectionClass="NSMutableArray" id="T1D-cx-xk4"/>
-                <outletCollection property="numberViews" destination="kCa-D7-oJ2" collectionClass="NSMutableArray" id="Csn-Dz-zdE"/>
-                <outletCollection property="numberViews" destination="1kN-DU-wWS" collectionClass="NSMutableArray" id="nAC-fM-OBt"/>
-                <outletCollection property="koreanLanguageViews" destination="0Ky-re-cCZ" collectionClass="NSMutableArray" id="2XL-81-olM"/>
-                <outletCollection property="specialCharacterViews" destination="z8r-j4-6Cp" collectionClass="NSMutableArray" id="8vJ-4A-awX"/>
-                <outletCollection property="specialCharacterViews" destination="kCa-D7-oJ2" collectionClass="NSMutableArray" id="2ag-WP-BGW"/>
-                <outletCollection property="specialCharacterViews" destination="pWc-oX-CWh" collectionClass="NSMutableArray" id="Zee-d2-JhV"/>
-                <outletCollection property="specialCharacterViews" destination="h7G-tP-pQV" collectionClass="NSMutableArray" id="dlG-Zy-Jpe"/>
-                <outletCollection property="specialCharacterViews" destination="Ra8-YJ-obh" collectionClass="NSMutableArray" id="HKT-Dw-fnb"/>
-                <outletCollection property="specialCharacterViews" destination="gbS-Af-5k1" collectionClass="NSMutableArray" id="Eeu-rs-KbP"/>
+                <outlet property="containerStackView" destination="xUo-Zy-YNq" id="S2B-Bi-ocp"/>
+                <outlet property="pasteInBackgroundView" destination="S3e-0q-OXo" id="R5o-OQ-yyL"/>
                 <outletCollection property="consonantButtons" destination="Qc6-Bf-aS8" collectionClass="NSMutableArray" id="OLV-Sz-hX8"/>
                 <outletCollection property="consonantButtons" destination="ynZ-sy-SSA" collectionClass="NSMutableArray" id="8B1-3d-SaK"/>
                 <outletCollection property="consonantButtons" destination="dPF-Hj-HuY" collectionClass="NSMutableArray" id="pts-FX-6zN"/>
@@ -1472,6 +1846,26 @@
                 <outletCollection property="consonantButtons" destination="xnW-kM-QvR" collectionClass="NSMutableArray" id="kYh-hL-XM5"/>
                 <outletCollection property="consonantButtons" destination="jRV-jI-R6E" collectionClass="NSMutableArray" id="thH-eY-kba"/>
                 <outletCollection property="consonantButtons" destination="r3I-xN-Xqy" collectionClass="NSMutableArray" id="6y2-YS-nGo"/>
+                <outletCollection property="koreanLanguageViews" destination="4ZL-qe-1b3" collectionClass="NSMutableArray" id="6eu-9S-iCE"/>
+                <outletCollection property="koreanLanguageViews" destination="83w-f9-fq9" collectionClass="NSMutableArray" id="6AO-EA-0d5"/>
+                <outletCollection property="koreanLanguageViews" destination="pSo-ah-N7I" collectionClass="NSMutableArray" id="KdT-VM-PBT"/>
+                <outletCollection property="koreanLanguageViews" destination="3nj-zK-lXe" collectionClass="NSMutableArray" id="0RA-MO-9FU"/>
+                <outletCollection property="numberViews" destination="rgb-k9-HPQ" collectionClass="NSMutableArray" id="T4R-Da-okY"/>
+                <outletCollection property="numberViews" destination="tvR-Mb-nkb" collectionClass="NSMutableArray" id="E2j-p7-iOE"/>
+                <outletCollection property="numberViews" destination="Llj-AW-93G" collectionClass="NSMutableArray" id="sIX-wC-5ZU"/>
+                <outletCollection property="numberViews" destination="paK-gf-CXL" collectionClass="NSMutableArray" id="Dcl-kx-3er"/>
+                <outletCollection property="specialCharacterViews" destination="pWc-oX-CWh" collectionClass="NSMutableArray" id="mkQ-mF-5Ro"/>
+                <outletCollection property="specialCharacterViews" destination="h7G-tP-pQV" collectionClass="NSMutableArray" id="oJA-eT-KPr"/>
+                <outletCollection property="specialCharacterViews" destination="Ra8-YJ-obh" collectionClass="NSMutableArray" id="qFV-8Z-hQE"/>
+                <outletCollection property="specialCharacterViews" destination="gbS-Af-5k1" collectionClass="NSMutableArray" id="Ecv-yb-DYT"/>
+                <outletCollection property="koreanLanguageViews" destination="0Ky-re-cCZ" collectionClass="NSMutableArray" id="hXK-p9-cx1"/>
+                <outletCollection property="koreanLanguageViews" destination="YJq-9C-wFq" collectionClass="NSMutableArray" id="AXp-u4-Tkm"/>
+                <outletCollection property="numberViews" destination="1kN-DU-wWS" collectionClass="NSMutableArray" id="pt9-NM-xyS"/>
+                <outletCollection property="numberViews" destination="kCa-D7-oJ2" collectionClass="NSMutableArray" id="kIh-Lm-rhJ"/>
+                <outletCollection property="specialCharacterViews" destination="z8r-j4-6Cp" collectionClass="NSMutableArray" id="Sbe-jB-nEj"/>
+                <outletCollection property="specialCharacterViews" destination="kCa-D7-oJ2" collectionClass="NSMutableArray" id="jWd-rA-ix2"/>
+                <outletCollection property="inputModeSwitch" destination="aLm-iA-kUg" collectionClass="NSMutableArray" id="BmJ-LO-crs"/>
+                <outletCollection property="inputModeSwitch" destination="d7X-YM-zER" collectionClass="NSMutableArray" id="oll-Kk-JWw"/>
             </connections>
             <point key="canvasLocation" x="38.167938931297705" y="209.85915492957747"/>
         </view>
@@ -1491,6 +1885,12 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

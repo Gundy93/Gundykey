@@ -34,12 +34,15 @@ final class KeyboardViewController: UIInputViewController {
         
         customKeyboardView = objects.first as? GundyKeyboardView
         customKeyboardView.delegate = self
-        customKeyboardView.inputModeSwitch.addTarget(self,
-                                                     action: #selector(handleInputModeList(from:with:)),
-                                                     for: .allTouchEvents)
-        customKeyboardView.inputModeSwitch.isHidden = !self.needsInputModeSwitchKey
-        customKeyboardView.inputModeSwitch.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        customKeyboardView.inputModeSwitch.forEach { $0.isHidden = !self.needsInputModeSwitchKey }
+        customKeyboardView.inputModeSwitch.forEach { $0.heightAnchor.constraint(equalToConstant: 40).isActive = true }
         inputView = customKeyboardView
+        
+        guard let inputModeSwitch = customKeyboardView.inputModeSwitch.last as? UIButton else { return }
+        
+        inputModeSwitch.addTarget(self,
+                                  action: #selector(handleInputModeList(from:with:)),
+                                  for: .allTouchEvents)
     }
 }
 
@@ -104,6 +107,10 @@ extension KeyboardViewController: GundyKeyboardViewDelegate {
         textDocumentProxy.insertText(newCharacter)
         lastInput = .other
         lastWords.removeAll()
+    }
+    
+    func moveCursor(for direction: GundyKeyboardView.Direction) {
+        
     }
     
     func pasteInto() {

@@ -84,7 +84,7 @@ final class PracticeViewController: UIViewController {
         
         customKeyboardView = objects.first as? GundyKeyboardView
         customKeyboardView.delegate = self
-        customKeyboardView.inputModeSwitch.isHidden = true
+        customKeyboardView.inputModeSwitch.forEach { $0.isHidden = true }
         practiceTextField.inputView = customKeyboardView
     }
     
@@ -154,6 +154,10 @@ extension PracticeViewController: GundyKeyboardViewDelegate {
         practiceTextField.insertText(newCharacter)
         lastInput = .other
         lastWords.removeAll()
+    }
+    
+    func moveCursor(for direction: GundyKeyboardView.Direction) {
+        
     }
     
     func pasteInto() {
